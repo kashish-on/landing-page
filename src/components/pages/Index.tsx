@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import LogoSection from "@/components/LogoSection";
 import VideoSection from "@/components/VideoSection";
 import CoreOfferingsSection from "@/components/CoreOfferingsSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -20,6 +21,7 @@ const Index = () => {
       <main className="w-full">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <HeroSection />
+          <LogoSection />
           <VideoSection />
           <CoreOfferingsSection />
           <FeaturesSection />
