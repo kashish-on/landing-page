@@ -31,18 +31,19 @@ const Footer = () => {
 
     {/* Subscribe Button */}
     <button
-  className="
-    px-10 py-4
-    rounded-full
-    text-white
-    text-sm
-    font-semibold
-    tracking-wide
-    bg-gradient-to-r from-[#0E78B7] to-[#4B148C]
-    hover:opacity-90
-    transition
-    whitespace-nowrap
-  "
+     className="btn-gradient text-primary-foreground px-5 py-3 text-base group shadow-violet  whitespace-nowrap"
+  // className="
+  //   px-10 py-4
+  //   rounded-full
+  //   text-white
+  //   text-sm
+  //   font-semibold
+  //   tracking-wide
+  //   bg-gradient-to-r from-[#0E78B7] to-[#4B148C]
+  //   hover:opacity-90
+  //   transition
+  //   whitespace-nowrap
+  // "
 >
   SUBSCRIBE NOW
 </button>

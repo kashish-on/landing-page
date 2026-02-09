@@ -36,7 +36,7 @@ const stats = [
 const DataToRevenueSection = () => {
   return (
     <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-4 max-w-[1400px]">
         {/* Badge */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -76,12 +76,12 @@ const DataToRevenueSection = () => {
   whileInView={{ opacity: 1, x: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.6, ease: "easeOut" }}
-  className="flex-1 flex justify-center lg:justify-end pr-8"
+  className="relative flex-1 flex justify-center lg:justify-end pl-14 overflow-visible"
 >
   <img
     src={DataToRevenueStack}
     alt="Data to Revenue Flow"
-    className="max-w-[720px] w-full h-auto translate-x-5"
+    className="max-w-[900px] w-full h-auto translate-x-14"
   />
 </motion.div>
 

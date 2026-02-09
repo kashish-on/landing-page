@@ -9,13 +9,14 @@ const logos = [
   { src: microsoft, alt: "Microsoft" },
   { src: ibm, alt: "IBM" },
   { src: ntt, alt: "NTT Data" },
+  { src: google, alt: "Google" },
 ];
 
 const LogoSection = () => {
   return (
     <section className="relative z-20 -mt-10">
       <div className="w-full">
-        <div className="mx-auto max-w-[1400px] bg-white/70 backdrop-blur-md rounded-2xl shadow-md py-6 px-6">
+        <div className="mx-auto max-w-[1400px] bg-white/70 backdrop-blur-md rounded-2xl shadow-lg py-8 px-8">
 
           {/* Trusted Badge */}
           <div className="flex justify-center mb-4">
@@ -25,13 +26,13 @@ const LogoSection = () => {
           </div>
 
           {/* Logos */}
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+          <div className="flex items-center justify-between w-full px-6 md:px-12">
             {logos.map((logo, index) => (
               <img
                 key={index}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-8 md:h-10 object-contain opacity-80 hover:opacity-100 transition"
+                className="h-8 md:h-10 object-contain opacity-80 hover:grayscale-0 hover:opacity-100 transition"
               />
             ))}
           </div>

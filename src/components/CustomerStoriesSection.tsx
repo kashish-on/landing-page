@@ -2,27 +2,33 @@ import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
+import google from "@/assets/google.png";
+import microsoft from "@/assets/microsoft.png";
+
+import manAvatar from "@/assets/man.png";
+import womanAvatar from "@/assets/woman.png";
+
 const testimonials = [
   {
     type: "stat",
     value: "10X",
     label: "Revenue Boost",
-    company: "tenstorrent",
-    bgColor: "bg-violet-100",
+    company: "Microsoft",
+    bgColor: "bg-[#470277]/10",
   },
   {
     type: "stat",
     value: "10X",
     label: "Revenue Boost",
-    company: "tenstorrent",
-    bgColor: "bg-cyan-100",
+    company: "Microsoft",
+    bgColor: "bg-[#0B87BA]/10",
   },
   {
     type: "quote",
     quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
     author: "Ekin Bayildiran",
     role: "Executive Search, Tenstorrent",
-    company: "HSBC",
+    company: "Google",
     bgColor: "bg-card",
   },
   {
@@ -30,7 +36,7 @@ const testimonials = [
     quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
     author: "Ekin Bayildiran",
     role: "Executive Search, Tenstorrent",
-    company: "HSBC",
+    company: "Google",
     bgColor: "bg-card",
   },
   {
@@ -38,30 +44,30 @@ const testimonials = [
     quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
     author: "Ekin Bayildiran",
     role: "Executive Search, Tenstorrent",
-    company: "HSBC",
-    bgColor: "bg-card",
-  },
-  {
-    type: "stat",
-    value: "10X",
-    label: "Revenue Boost",
-    company: "tenstorrent",
-    bgColor: "bg-violet-100",
-  },
-  {
-    type: "quote",
-    quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
-    author: "Ekin Bayildiran",
-    role: "Executive Search, Tenstorrent",
-    company: "HSBC",
+    company: "Google",
     bgColor: "bg-card",
   },
   {
     type: "stat",
     value: "10X",
     label: "Revenue Boost",
-    company: "tenstorrent",
-    bgColor: "bg-violet-100",
+    company: "Microsoft",
+    bgColor: "bg-[#470277]/10",
+  },
+  {
+    type: "quote",
+    quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
+    author: "Ekin Bayildiran",
+    role: "Executive Search, Tenstorrent",
+    company: "Google",
+    bgColor: "bg-card",
+  },
+  {
+    type: "stat",
+    value: "10X",
+    label: "Revenue Boost",
+    company: "Microsoft",
+    bgColor: "bg-[#470277]/10",
   },
 ];
 
@@ -91,6 +97,7 @@ const CustomerStoriesSection = () => {
           <br />
           <span className="violet-gradient-text">Product to Succeed</span>
         </motion.h2>
+
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +108,7 @@ const CustomerStoriesSection = () => {
           See how businesses achieve real results with DataGen — from verified leads to faster conversions.
         </motion.p>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,72 +122,60 @@ const CustomerStoriesSection = () => {
           </Button>
         </motion.div>
 
-        {/* Happy Clients */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="flex items-center justify-center gap-4 mb-12"
-        >
-          <div className="flex -space-x-3">
-            {[1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-violet-200 to-violet-300 border-2 border-card"
-              />
-            ))}
-          </div>
-          <div>
-            <span className="font-semibold text-foreground">Happy Clients</span>
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm text-muted-foreground">3.5(10k Review)</span>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className={`${item.bgColor} rounded-2xl p-6 border border-border hover:shadow-card transition-shadow`}
-            >
-              {item.type === "stat" ? (
-                <div>
-                  <div className="text-4xl font-bold text-foreground mb-2">{item.value}</div>
-                  <div className="text-muted-foreground mb-8">{item.label}</div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-violet-400 to-violet-600 rounded-lg" />
-                    <span className="font-medium text-muted-foreground">{item.company}</span>
-                  </div>
-                </div>
-              ) : (
-                <div>
-                  <p className="text-foreground mb-8">{item.quote}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-200 to-gray-300" />
-                      <div>
-                        <div className="font-semibold text-foreground">{item.author}</div>
-                        <div className="text-sm text-muted-foreground">{item.role}</div>
-                      </div>
-                    </div>
+          {testimonials.map((item, index) => {
+            const profileImg = index % 2 === 0 ? manAvatar : womanAvatar;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+                className={`${item.bgColor} rounded-2xl p-6 border border-border hover:shadow-card transition-shadow`}
+              >
+                {item.type === "stat" ? (
+                  <div>
+                    <div className="text-4xl font-bold text-foreground mb-2">{item.value}</div>
+                    <div className="text-muted-foreground mb-8">{item.label}</div>
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-destructive rounded" />
-                      <span className="font-bold text-foreground">{item.company}</span>
+                      <img
+                        src={microsoft}
+                        alt="Microsoft"
+                        className="w-12 h-12 object-contain"
+                      />
+                      <span className="font-medium text-muted-foreground">{item.company}</span>
                     </div>
                   </div>
-                </div>
-              )}
-            </motion.div>
-          ))}
+                ) : (
+                  <div>
+                    <p className="text-foreground mb-8">{item.quote}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={profileImg}
+                          alt={item.author}
+                          className="w-10 h-10 rounded-full object-cover"
+                        />
+                        <div>
+                          <div className="font-semibold text-foreground">{item.author}</div>
+                          <div className="text-sm text-muted-foreground">{item.role}</div>
+                        </div>
+                      </div>
+                      <img
+                        src={google}
+                        alt="Google"
+                        className="w-12 h-8 object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

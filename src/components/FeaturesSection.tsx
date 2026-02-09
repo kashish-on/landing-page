@@ -67,7 +67,7 @@ const FeaturesSection = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="aspect-[4/3] bg-white rounded-2xl border-2 border-[#72339F]/30 shadow-[0_10px_30px_rgba(114,51,159,0.15)] overflow-hidden group cursor-pointer hover:shadow-[0_16px_40px_rgba(114,51,159,0.25)] transition-all">
+                <div className="aspect-[4/3] bg-white rounded-2xl border-2 border-[#72339F]/30 shadow-[0_10px_30px_rgba(114,51,159,0.15)] overflow-hidden group cursor-pointer duration-300 ease-outhover:-translate-y-2 hover:shadow-[0_16px_40px_rgba(114,51,159,0.25)] hover:border-[#72339F]">
                   <img
                     //src={feature.image}   // 👈 replace with your actual image path
                     alt={feature.title}
