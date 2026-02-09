@@ -31,7 +31,7 @@ const Footer = () => {
 
     {/* Subscribe Button */}
     <button
-     className="btn-gradient text-primary-foreground px-5 py-3 text-base group shadow-violet  whitespace-nowrap"
+     className="btn-gradient footer-btn btn-gradient text-primary-foreground group shadow-violet"
   // className="
   //   px-10 py-4
   //   rounded-full

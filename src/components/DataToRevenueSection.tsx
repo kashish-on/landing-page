@@ -1,6 +1,7 @@
 import { Megaphone, Heart, BarChart3, ClipboardCheck, Mic, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import DataToRevenueStack from "@/assets/data-to-revenue-stack.svg";
+
+import DataToRevenueStack from "@/assets/data-to-revenue.png";
 
 
 import PolygonWhite from "@/assets/polygon-white.svg";
@@ -76,12 +77,16 @@ const DataToRevenueSection = () => {
   whileInView={{ opacity: 1, x: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.6, ease: "easeOut" }}
-  className="relative flex-1 flex justify-center lg:justify-end pl-14 overflow-visible"
+  className="relative flex-1 flex justify-center lg:justify-end pl-12 overflow-visible"
 >
-  <img
+  <motion.img
     src={DataToRevenueStack}
     alt="Data to Revenue Flow"
-    className="max-w-[900px] w-full h-auto translate-x-14"
+    className="max-w-[900px] w-full h-auto translate-x-2 -translate-y-6"
+    initial={{ opacity: 0, y: 30, x: -20 }}
+  whileInView={{ opacity: 1, y: -20, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
   />
 </motion.div>
 

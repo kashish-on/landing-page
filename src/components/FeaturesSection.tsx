@@ -1,11 +1,17 @@
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 
+import FeatureImg1 from "@/assets/img1.png";
+import FeatureImg2 from "@/assets/img2.png";
+import FeatureImg3 from "@/assets/img3.png";
+import FeatureImg4 from "@/assets/img4.png";
+
+
 const features = [
   {
     badge: "Chrome Extension",
     title: "Unique Add-On",
-    //image: "/images/feature-1.png",
+    image: FeatureImg1,
     points: [
       "Verified CXO intelligence from your account list",
       "Ready-to-use CXO data packs by industry",
@@ -16,6 +22,7 @@ const features = [
   {
     badge: "Chrome Extension",
     title: "AI Lead Recommendations",
+    image: FeatureImg2,
     points: [
       "Smart, activity-based suggestions",
       "Personalized platform insights",
@@ -26,6 +33,7 @@ const features = [
   {
     badge: "Chrome Extension",
     title: "Verified CXO Contacts",
+    image: FeatureImg3,
     points: [
       "Access names, emails & phone numbers",
       "Stay updated with job changes",
@@ -36,6 +44,7 @@ const features = [
   {
     badge: "Chrome Extension",
     title: "Smart Seamless Integration",
+    image: FeatureImg4,
     points: [
       "Target by role, industry, or company",
       "Find qualified leads faster",
@@ -67,11 +76,11 @@ const FeaturesSection = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="aspect-[4/3] bg-white rounded-2xl border-2 border-[#72339F]/30 shadow-[0_10px_30px_rgba(114,51,159,0.15)] overflow-hidden group cursor-pointer duration-300 ease-outhover:-translate-y-2 hover:shadow-[0_16px_40px_rgba(114,51,159,0.25)] hover:border-[#72339F]">
+                <div className="bg-white rounded-2xl border-2 border-[#72339F]/30 shadow-[0_10px_30px_rgba(114,51,159,0.15)] p-4">
                   <img
-                    //src={feature.image}   // 👈 replace with your actual image path
+                    src={feature.image}   // 👈 replace with your actual image path
                     alt={feature.title}
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                    className="w-full h-auto object-contain rounded-xl"
                   />
                 </div>
 

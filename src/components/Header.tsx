@@ -56,7 +56,7 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <Button
               asChild
-              className="rounded-full btn-gradient hover:opacity-90 transition-opacity shadow-lg shadow-primary/25"
+              className="btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet"
             >
               <a href="https://observenow.ai/signup.html">
                 START YOUR FREE TRIAL
@@ -66,7 +66,7 @@ const Header = () => {
             
             <Button
   asChild
-  className="hidden sm:inline-flex rounded-full bg-[#72339F] text-white px-6 py-2 shadow-md hover:bg-[#6a2f93] hover:shadow-lg transition-all"
+  className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all"
 >
   <a href="https://observenow.ai/login.html" className="flex items-center">
     <LogIn className="w-4 h-4 mr-2" />

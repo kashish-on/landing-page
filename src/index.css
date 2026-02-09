@@ -157,6 +157,32 @@
   color: transparent;
 }
 
+button {
+  padding: 21px 30px !important;
+  font-size: 14px !important;
+}
+
+a.btn-gradient {
+  padding: 21px 30px !important;
+  font-size: 14px !important;
+}
+
+/* Global CTA button styles */
+a.inline-flex.justify-center {
+  padding: 21px 30px !important;
+  font-size: 14px !important;
+}
+
+.footer-btn {
+  padding: 21px 30px !important;
+  font-size: 14px !important;
+  white-space: nowrap;
+  line-height: 1 !important;
+  border-radius: 14px;             /* optional: match design */
+  height: auto !important;
+  min-height: unset !important;
+}
+
 
   /* .violet-gradient-text {
     @apply bg-gradient-to-r from-violet-600 to-violet-500 bg-clip-text text-transparent;
