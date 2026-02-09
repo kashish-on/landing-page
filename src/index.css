@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 20% 98%;
+    --foreground: 260 84% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 84% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 84% 11%;
+
+    --primary: 270 50% 41%;;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 250 20% 96%;
+    --secondary-foreground: 260 84% 11%;
+
+    --brand-blue: 201 71% 58%;     /* #48B4E1 */
+    --brand-violet: 271 51% 41%;   /* #72339F */
+
+    --muted: 250 20% 96%;
+    --muted-foreground: 260 10% 45%;
+
+    --accent: 263 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 250 20% 90%;
+    --input: 250 20% 90%;
+    --ring: 263 70% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom ObserveNow colors */
+    --violet-primary: 270 50% 41%;
+    --violet-dark: 270 60% 32%;
+    --violet-light: 270 55% 65%;
+    --violet-muted: 270 30% 95%;
+    --blue-primary: 200 72% 58%;
+    --blue-light: 200 85% 72%;
+    --cyan-accent: 185 100% 45%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 260 30% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 260 30% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 260 30% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 263 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 30% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 260 30% 18%;
+    --muted-foreground: 260 10% 65%;
+
+    --accent: 263 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 263 70% 60%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card text-sm font-medium;
+  }
+
+  .section-badge::before,
+  .section-badge::after {
+    content: '✦';
+    @apply text-primary text-xs;
+  }
+
+  /* .gradient-text {
+    @apply bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent;
+  } */
+
+  .btn-gradient {
+    @apply text-white font-semibold rounded-xl px-6 py-3 transition-all;
+    background: linear-gradient(90deg, #48B4E1 0%, #72339F 100%);
+  }
+
+  .btn-gradient:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 8px 24px rgba(114, 51, 159, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .btn-violet {
+    @apply text-white font-semibold rounded-xl px-6 py-3 transition-all;
+    background-color: #72339F;
+  }
+
+  .btn-violet:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 8px 24px rgba(114, 51, 159, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .gradient-text {
+  background: linear-gradient(90deg, #48B4E1, #72339F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+  /* .violet-gradient-text {
+    @apply bg-gradient-to-r from-violet-600 to-violet-500 bg-clip-text text-transparent;
+  } */
+
+  .violet-gradient-text {
+  /* background: linear-gradient(90deg, #48B4E1 0%, #72339F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #72339F;
+}
+
+
+
+  /* .card-shadow {
+    box-shadow: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+  }
+
+  .card-shadow-lg {
+    box-shadow: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+  } */
+
+  .card-shadow {
+  box-shadow: 0 6px 24px -6px rgba(114, 51, 159, 0.25);
+}
+
+.card-shadow-lg {
+  box-shadow: 0 16px 48px -12px rgba(114, 51, 159, 0.35);
+}
+
+}
+
+@layer utilities {
+  /* Marquee animation */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Card slide animation */
+  @keyframes slide-cards {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .animate-slide-cards {
+    animation: slide-cards 20s linear infinite;
+  }
+
+  /* Fade in up */
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  /* Chevron slide */
+  @keyframes chevron-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(40px); }
+  }
+
+  .animate-chevron {
+    animation: chevron-slide 1s ease-in-out infinite alternate;
+  }
+
+  /* Pulse glow */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.5); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Scale in */
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  /* Stagger delay utilities */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
