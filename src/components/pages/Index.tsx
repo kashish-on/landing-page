@@ -19,16 +19,18 @@ const Index = () => {
       <Header />
 
       <main className="w-full">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <HeroSection />
           <LogoSection />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <VideoSection />
           <CoreOfferingsSection />
           <FeaturesSection />
           <DataToRevenueSection />
           <HowItWorksSection />
           <AnalyticsSection />
+        </div>
           <WhyChooseUsSection />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <PricingSection />
           <CustomerStoriesSection />
           <IntegrationsSection />

@@ -3,6 +3,7 @@ import google from "@/assets/google.png";
 import microsoft from "@/assets/microsoft.png";
 import ibm from "@/assets/ibm.png";
 import ntt from "@/assets/ntt.png";
+import { Star } from "lucide-react";
 
 const logos = [
   { src: google, alt: "Google" },
@@ -16,13 +17,13 @@ const LogoSection = () => {
   return (
     <section className="relative z-20 -mt-10">
       <div className="w-full">
-        <div className="mx-auto max-w-[1400px] bg-white/70 backdrop-blur-md rounded-2xl shadow-lg py-8 px-8">
+        <div className="mx-auto max-w-[1400px] bg-white/70 backdrop-blur-md py-7 px-8">
 
           {/* Trusted Badge */}
-          <div className="flex justify-center mb-4">
-            {/* <span className="inline-flex items-center gap-2 rounded-full border px-4 py-1 text-sm font-medium text-muted-foreground">
-              ✨ Trusted by 500+ Fortune companies all over the world ✨
-            </span> */}
+          <div className="absolute -top-5 left-1/2 -translate-x-1/2">
+            <span className="section-badge shadow-lg">
+               Trusted by 500+ Fortune companies all over the world 
+            </span>
           </div>
 
           {/* Logos */}

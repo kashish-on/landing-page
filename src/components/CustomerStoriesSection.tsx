@@ -52,7 +52,7 @@ const testimonials = [
     value: "10X",
     label: "Revenue Boost",
     company: "Microsoft",
-    bgColor: "bg-[#470277]/10",
+    bgColor: "bg-[#0B87BA]/10",
   },
   {
     type: "quote",
@@ -123,7 +123,7 @@ const CustomerStoriesSection = () => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((item, index) => {
             const profileImg = index % 2 === 0 ? manAvatar : womanAvatar;
 
@@ -135,7 +135,11 @@ const CustomerStoriesSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className={`${item.bgColor} rounded-2xl p-6 border border-border hover:shadow-card transition-shadow`}
+                className={`${item.bgColor} rounded-2xl p-6 border border-border hover:shadow-card transition-shadow ${
+      item.type === "stat"
+        ? "lg:col-span-1 w-full max-w-[300px] mx-auto"     // 👈 makes colored boxes narrower (more square)
+        : "lg:col-span-2 h-[220px]"             // 👈 makes white boxes wider (rectangle)
+    }`}
               >
                 {item.type === "stat" ? (
                   <div>

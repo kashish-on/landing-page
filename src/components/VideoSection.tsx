@@ -1,34 +1,26 @@
-// const VideoSection = () => {
-//   return (
-//     <section className="py-16 bg-background">
-//       <div className="container mx-auto px-4">
-//         <div className="max-w-5xl mx-auto">
-//           <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl shadow-lg flex items-center justify-center">
-//             <div className="w-20 h-20 bg-white/80 rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
-//               <div className="w-0 h-0 border-l-[20px] border-l-primary border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1" />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default VideoSection;
-
 const VideoSection = () => {
   return (
     <section className="py-16 bg-background">
+      {/* Middle purple gradient continuation */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div
+          className="w-[1200px] h-[600px] rounded-full blur-[140px] opacity-50"
+          style={{
+            background:
+              "radial-gradient(circle at center, rgba(71,2,119,0.35) 0%, rgba(71,2,119,0.18) 35%, rgba(71,2,119,0.08) 55%, rgba(71,2,119,0) 70%)",
+          }}
+        />
+      </div>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="aspect-video rounded-3xl shadow-lg overflow-hidden">
-            <iframe
+            <video
               src="https://observenow.ai/assets/img/ai-video.mp4"
-              title="Rumi AI"
-              className="w-full h-full"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
           </div>
         </div>

@@ -181,6 +181,9 @@ a.inline-flex.justify-center {
   border-radius: 14px;             /* optional: match design */
   height: auto !important;
   min-height: unset !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

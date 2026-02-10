@@ -24,7 +24,7 @@ const CoreOfferingsSection = () => {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16"
         >
-          Your <span className="violet-gradient-text italic">Next-Gen Sales</span>
+          Your <span className="violet-gradient-text">Next-Gen Sales</span>
           <br />
           Intelligence Engine
         </motion.h2>

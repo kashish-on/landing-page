@@ -1,6 +1,8 @@
 import { Megaphone, Heart, BarChart3, ClipboardCheck, Mic, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
+import IconUsers from "@/assets/user.svg";
+
 import DataToRevenueStack from "@/assets/data-to-revenue.png";
 
 
@@ -28,10 +30,10 @@ const steps = [
 ];
 
 const stats = [
-  { icon: Users, value: "40K+", label: "Business Leads" },
-  { icon: Users, value: "80K+", label: "CXO Data Sets" },
-  { icon: Users, value: "220K+", label: "CXO Leaders Data Points" },
-  { icon: Users, value: "300K+", label: "B2B Organisations" },
+  { icon: IconUsers, value: "40K+", label: "Business Leads" },
+  { icon: IconUsers, value: "80K+", label: "CXO Data Sets" },
+  { icon: IconUsers, value: "220K+", label: "CXO Leaders Data Points" },
+  { icon: IconUsers, value: "300K+", label: "B2B Organisations" },
 ];
 
 const DataToRevenueSection = () => {
@@ -150,9 +152,17 @@ const DataToRevenueSection = () => {
               // className="bg-card rounded-2xl p-6 border-2 border-primary/20 hover:border-primary/50 transition-colors text-center shadow-card"
               className="bg-card rounded-2xl p-6 border-2 border-[#72339F] transition-colors text-center shadow-[0_8px_24px_rgba(114,51,159,0.15)]"
             >
-              <div className="w-6 h-6 bg-[#72339F] rounded-xl mx-auto mb-4 flex items-center justify-center">
+              {/* <div className="w-6 h-6 bg-[#72339F] rounded-xl mx-auto mb-4 flex items-center justify-center">
                 <stat.icon className="w-4 h-4 text-white" />
-              </div>
+              </div> */}
+              <div className="w-10 h-10 bg-[#72339F] rounded-xl mx-auto mb-4 flex items-center justify-center">
+  <img 
+    src={stat.icon} 
+    alt={stat.label} 
+    className="w-12 h-12 object-contain"
+  />
+</div>
+
               <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
             </motion.div>

@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Phone, Star } from "lucide-react";
+import { ArrowRight, Mail, Phone, Star, StarHalf} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -16,9 +16,20 @@ const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-violet-50/50 pt-28 md:pt-32 pb-32">
       {/* Decorative gradient blob */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-violet-200/30 to-blue-200/30 rounded-full blur-3xl" />
+      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-violet-200/30 to-blue-200/30 rounded-full blur-3xl" /> */}
       
-      <div className="container mx-auto px-4 relative z-10">
+      {/* Center purple glow (exact middle gradient like reference) */}
+<div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+  <div
+    className="w-[1200px] h-[600px] rounded-full blur-[140px] opacity-60"
+    style={{
+      background:
+        "radial-gradient(circle at center, rgba(71,2,119,0.35) 0%, rgba(71,2,119,0.18) 35%, rgba(71,2,119,0.08) 55%, rgba(71,2,119,0) 70%)",
+    }}
+  />
+</div>
+
+      <div className="px-4 relative z-10">
         {/* Badge */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -70,16 +81,23 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-center justify-center gap-3 mb-16"
+          className="flex items-center justify-center gap-3 mb-16 text-[#470277]"
         >
-          <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-600 rounded flex items-center justify-center text-white text-xs font-bold">G</div>
+          <div className="w-6 h-6 rounded flex items-center justify-center text-white text-xs font-bold bg-[#470277]">G</div>
           <div className="flex gap-0.5">
             {[1, 2, 3, 4].map((i) => (
-              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <Star key={i} className="w-4 h-4 fill-[#470277] text-[#470277]" />
             ))}
-            <Star className="w-4 h-4 fill-yellow-400/50 text-yellow-400" />
+            {/* <Star className="w-4 h-4 fill-[#470277]/40 text-[#470277]" /> */}
+            <div className="relative w-4 h-4">
+    <Star className="absolute inset-0 w-4 h-4 text-[#470277]" />
+    <Star
+      className="absolute inset-0 w-4 h-4 fill-[#470277] text-[#470277]"
+      style={{ clipPath: "inset(0 50% 0 0)" }}
+    />
+  </div>
           </div>
-          <span className="text-sm text-muted-foreground">4.4/5 | <span className="font-semibold text-foreground">5,000+ REVIEWS</span></span>
+          <span className="text-sm text-[#470277]">4.4/5 | <span className="font-semibold text-[#470277]">No Credit Card Required</span></span>
         </motion.div>
 
         {/* Contact Cards Carousel */}

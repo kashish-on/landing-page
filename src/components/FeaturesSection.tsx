@@ -76,11 +76,11 @@ const FeaturesSection = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="bg-white rounded-2xl border-2 border-[#72339F]/30 shadow-[0_10px_30px_rgba(114,51,159,0.15)] p-4">
+                <div className="bg-white rounded-2xl border-2 border-[#72339F]/30 shadow-[0_10px_30px_rgba(114,51,159,0.15)] hover:border-[#72339F] p-4">
                   <img
                     src={feature.image}   // 👈 replace with your actual image path
                     alt={feature.title}
-                    className="w-full h-auto object-contain rounded-xl"
+                    className="max-w-full max-h-full object-contain rounded-xl"
                   />
                 </div>
 
