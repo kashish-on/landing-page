@@ -10,7 +10,7 @@ import StepLine from "@/assets/step-line.png";
 
 import PuzzleDeco from "@/assets/puzzle.png";
 
-import FeatureLeftImg from "@/assets/whychooseus.svg";
+import FeatureLeftImg from "@/assets/work-seamlessly.jpeg";
 
 const steps = [
   {
@@ -78,8 +78,8 @@ const HowItWorksSection = () => {
               {/* <div className="w-full h-full rounded-xl bg-gray-100" /> */}
               <img 
   src={FeatureLeftImg}
-  alt="Why Choose Us"
-  className="w-full h-full object-contain rounded-xl"
+  alt="Work Seamlessly"
+  className="w-full h-full object-cover rounded-xl"
 />
 
             </div>
