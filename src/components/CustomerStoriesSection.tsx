@@ -73,7 +73,7 @@ const testimonials = [
 
 const CustomerStoriesSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-15 pb-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Badge */}
         <motion.div 
@@ -82,7 +82,7 @@ const CustomerStoriesSection = () => {
           viewport={{ once: true }}
           className="flex justify-center mb-8"
         >
-          <span className="section-badge">Customer Story</span>
+          <span className="section-badge border border-[#470277]">Customer Story</span>
         </motion.div>
 
         {/* Heading */}
@@ -137,8 +137,8 @@ const CustomerStoriesSection = () => {
                 whileHover={{ y: -5 }}
                 className={`${item.bgColor} rounded-2xl p-6 border border-border hover:shadow-card transition-shadow ${
       item.type === "stat"
-        ? "lg:col-span-1 w-full max-w-[300px] mx-auto"     // 👈 makes colored boxes narrower (more square)
-        : "lg:col-span-2 h-[220px]"             // 👈 makes white boxes wider (rectangle)
+        ? "lg:col-span-1 w-full max-w-[300px] mx-auto shadow-md"     // 👈 makes colored boxes narrower (more square)
+        : "lg:col-span-2 h-[220px] shadow-md"             // 👈 makes white boxes wider (rectangle)
     }`}
               >
                 {item.type === "stat" ? (

@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <footer className="relative bg-white overflow-hidden">
       {/* Top-left soft violet glow */}
-<div className="pointer-events-none absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#470277]/20 blur-[100px]" />
+<div className="pointer-events-none absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#470277]/10 blur-[110px]" />
 
 {/* Bottom-right soft violet glow */}
-<div className="pointer-events-none absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#470277]/20 blur-[100px]" />
+<div className="pointer-events-none absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#470277]/10 blur-[110px]" />
 
       <div className="container mx-auto px-6 py-16">
 
@@ -37,7 +37,7 @@ const Footer = () => {
 
     {/* Subscribe Button */}
     <button
-     className="btn-gradient footer-btn text-primary-foreground group shadow-violet"
+     className="btn-gradient footer-btn shadow-violet"
 >
   SUBSCRIBE NOW
 </button>

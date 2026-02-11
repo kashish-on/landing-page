@@ -20,11 +20,11 @@ const integrations = [
   { name: "Dropbox", logo: dropboxLogo },
   { name: "LinkedIn", logo: linkedinLogo },
   { name: "Hubspot", logo: hubspotLogo },
-  { name: "Discord", logo: discordLogo },
-  { name: "Whatsapp", logo: whatsappLogo },
-  { name: "Zoom", logo: zoomLogo },
+  { name: "Discord", logo: discordLogo, scale: 1.5 },
+  { name: "Whatsapp", logo: whatsappLogo, scale: 2 },
+  { name: "Zoom", logo: zoomLogo, scale: 1.6 },
   { name: "Github", logo: githubLogo },
-  { name: "Shopify", logo: shopifyLogo },
+  { name: "Shopify", logo: shopifyLogo, scale: 2 },
   { name: "Mailchimp", logo: mailchimpLogo },
   { name: "Google Drive", logo: driveLogo },
   { name: "Notion", logo: notionLogo },
@@ -32,34 +32,34 @@ const integrations = [
 
 const positions = [
   // Top center
-  { top: "6%", left: "43%" },   // Slack
-  { top: "6%", left: "55%" },   // Dropbox
+  { top: "4%", left: "40%" },   // Slack
+  { top: "4%", left: "52%" },   // Dropbox
 
   // Upper arc
-  { top: "22%", left: "20%" },  // LinkedIn
-  { top: "22%", left: "32%" },  // Hubspot
-  { top: "22%", left: "66%" },  // Discord
-  { top: "22%", left: "78%" },  // Whatsapp
+  { top: "25%", left: "17%" },  // LinkedIn
+  { top: "25%", left: "29%" },  // Hubspot
+  { top: "25%", left: "63%" },  // Discord
+  { top: "25%", left: "75%" },  // Whatsapp
 
   // Mid arc
-  { top: "49%", left: "12%" },  // Zoom
-  { top: "49%", left: "26%" },  // Github
-  { top: "49%", left: "70%" },  // Shopify
-  { top: "49%", left: "84%" },  // Mailchimp
+  { top: "56%", left: "9%" },  // Zoom
+  { top: "56%", left: "21%" },  // Github
+  { top: "56%", left: "72%" },  // Shopify
+  { top: "56%", left: "84%" },  // Mailchimp
 
   // Bottom arc
-  { top: "76%", left: "18%" },  // Google Drive
-  { top: "76%", left: "78%" },  // Notion
+  { top: "87%", left: "4%" },  // Google Drive
+  { top: "87%", left: "89%" },  // Notion
 ];
 
 
 const IntegrationsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-violet-50/30">
+    <section className="py-20 bg-[#470277]/5 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="relative">
           {/* Floating Integration Cards */}
-          <div className="relative h-[520px] mb-8">
+          <div className="relative min-h-[420px] h-auto mb-8">
             {integrations.map((integration, index) => {
               const pos = positions[index % positions.length];
 
@@ -76,17 +76,20 @@ const IntegrationsSection = () => {
                     top: pos.top,
                     left: pos.left,
                     width: "110px",
-                    height: "130px",
+                    height: "110px",
                   }}
                   whileHover={{ scale: 1.08 }}
                 >
-                  <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-2 bg-white shadow-sm">
+                  
                     <img
                       src={integration.logo}
                       alt={integration.name}
-                      className="w-12 h-12 object-contain "
+                      className="w-11 h-11 object-contain "
+                      style={{
+    transform: `scale(${integration.scale ?? 1})`,
+  }}
                     />
-                  </div>
+                  
                   {/* <span className="text-sm font-medium text-foreground text-center">
                     {integration.name}
                   </span> */}
@@ -94,15 +97,15 @@ const IntegrationsSection = () => {
               );
             })}
           </div>
-
+        <div className="-mt-20">
           {/* Badge */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex justify-center mb-8"
+            className="flex justify-center mb-1"
           >
-            <span className="section-badge">Our Toolset</span>
+            <span className="section-badge -mt-10 mb-3 border border-[#470277]">Our Toolset</span>
           </motion.div>
 
           {/* Heading */}
@@ -141,6 +144,7 @@ const IntegrationsSection = () => {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
+          </div>
         </div>
       </div>
     </section>

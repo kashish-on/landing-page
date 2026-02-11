@@ -56,7 +56,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-1 pb-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="space-y-24">
           {features.map((feature, index) => (

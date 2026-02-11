@@ -21,10 +21,21 @@ const HeroSection = () => {
       {/* Center purple glow (exact middle gradient like reference) */}
 <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
   <div
-    className="w-[1200px] h-[600px] rounded-full blur-[140px] opacity-60"
+    className="mt-[220px] w-[1400px] h-[900px] rounded-full blur-[160px] opacity-70"
     style={{
       background:
         "radial-gradient(circle at center, rgba(71,2,119,0.35) 0%, rgba(71,2,119,0.18) 35%, rgba(71,2,119,0.08) 55%, rgba(71,2,119,0) 70%)",
+    }}
+  />
+</div>
+
+{/* Darker glow below cards */}
+<div className="pointer-events-none absolute inset-0 flex justify-center">
+  <div
+    className="mt-[480px] w-[1400px] h-[700px] rounded-full blur-[140px] opacity-80"
+    style={{
+      background:
+        "radial-gradient(circle at center, rgba(71,2,119,0.45) 0%, rgba(71,2,119,0.28) 30%, rgba(71,2,119,0.12) 55%, rgba(71,2,119,0) 75%)",
     }}
   />
 </div>
@@ -37,7 +48,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-8"
         >
-          <span className="section-badge">
+          <span className="section-badge border border-[#470277]">
             AI-powered B2B Sales Intelligence Platform
           </span>
         </motion.div>

@@ -6,7 +6,7 @@ import CoreOfferingsSection from "@/components/CoreOfferingsSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import DataToRevenueSection from "@/components/DataToRevenueSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import AnalyticsSection from "@/components/AnalyticsSection";
+// import AnalyticsSection from "@/components/AnalyticsSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import PricingSection from "@/components/PricingSection";
 import CustomerStoriesSection from "@/components/CustomerStoriesSection";
@@ -21,20 +21,21 @@ const Index = () => {
       <main className="w-full">
           <HeroSection />
           <LogoSection />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <VideoSection />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <CoreOfferingsSection />
           <FeaturesSection />
-          <DataToRevenueSection />
+        </div>
           <HowItWorksSection />
-          <AnalyticsSection />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <DataToRevenueSection />
         </div>
           <WhyChooseUsSection />
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <PricingSection />
           <CustomerStoriesSection />
-          <IntegrationsSection />
         </div>
+          <IntegrationsSection />
       </main>
 
       <Footer />

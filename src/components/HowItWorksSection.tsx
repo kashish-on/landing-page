@@ -1,298 +1,167 @@
-// import { Lightbulb, GraduationCap, ThumbsUp, MessageCircle, Settings } from "lucide-react";
-// import { motion } from "framer-motion";
-
-// const steps = [
-//   {
-//     number: "01",
-//     icon: Lightbulb,
-//     title: "Set up your account",
-//     description: "Get started in minutes with a simple sign-up.",
-//     color: "#0E8ECF", // Teal Blue
-//   },
-//   {
-//     number: "02",
-//     icon: GraduationCap,
-//     title: "Install the Chrome Extension",
-//     description: "Navigate smarter, directly from your browser.",
-//     color: "#1177B9", // Blue
-//   },
-//   {
-//     number: "03",
-//     icon: ThumbsUp,
-//     title: "Search Your Account List",
-//     description: "Discover qualified leads with verified contacts and export instantly.",
-//     color: "#1F5FBF", // Royal Blue
-//   },
-//   {
-//     number: "04",
-//     icon: MessageCircle,
-//     title: "Track & Grow with AI",
-//     description: "Monitor account analytics and unlock AI tailored recommendations.",
-//     color: "#2D3F99", // Deep Blue
-//   },
-//   {
-//     number: "05",
-//     icon: Settings,
-//     title: "Industry-Wise CXO Data",
-//     description: "Pre-packaged, accurate, and ready to use.",
-//     color: "#5A168A", // Purple
-//   },
-// ];
-
-// const HowItWorksSection = () => {
-//   return (
-//     <section className="py-20 bg-background">
-//       <div className="container mx-auto px-4">
-//         {/* Badge */}
-//         <motion.div 
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           className="flex justify-center mb-8"
-//         >
-//           <span className="section-badge">How It Works</span>
-//         </motion.div>
-
-//         {/* Heading */}
-//         <motion.h2 
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ delay: 0.1 }}
-//           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
-//         >
-//           Turn <span className="violet-gradient-text">Data into Leads</span> in 5 Easy Steps
-//         </motion.h2>
-
-//         <motion.p 
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ delay: 0.2 }}
-//           className="text-center text-muted-foreground max-w-2xl mx-auto mb-16"
-//         >
-//           From defining your target filters to extracting, cleaning, and verifying data, our system organizes everything into ready-to-use lead lists.
-//         </motion.p>
-
-//         {/* Steps */}
-//         <div className="flex flex-wrap justify-center gap-10 relative">
-//           {steps.map((step, index) => (
-//             <motion.div 
-//               key={index} 
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true }}
-//               transition={{ delay: index * 0.15 }}
-//               className="flex flex-col items-center w-44 group"
-//             >
-//               <div className="relative mb-6">
-//                 {/* Background number */}
-//                 <span className="absolute -top-6 -left-6 text-6xl font-bold text-muted/30">
-//                   {step.number}
-//                 </span>
-
-//                 {/* Icon circle */}
-//                 <motion.div 
-//                   whileHover={{ scale: 1.1 }}
-//                   className="relative z-10 w-20 h-20 rounded-full flex items-center justify-center shadow-lg"
-//                   style={{ backgroundColor: step.color }}
-//                 >
-//                   <step.icon className="w-8 h-8 text-white" />
-//                 </motion.div>
-//               </div>
-
-//               <h4 className="font-semibold text-foreground text-center mb-2">
-//                 {step.title}
-//               </h4>
-
-//               <p className="text-sm text-muted-foreground text-center">
-//                 {step.description}
-//               </p>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HowItWorksSection;
-
-import { Lightbulb, GraduationCap, ThumbsUp, MessageCircle, Settings } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+
+import Step1 from "@/assets/step-1.png"; 
+import Step2 from "@/assets/step-2.png"; 
+import Step3 from "@/assets/step-3.png"; 
+
+import StepLine from "@/assets/step-line.png"; 
+
+import PuzzleDeco from "@/assets/puzzle.png";
+
+import FeatureLeftImg from "@/assets/whychooseus.svg";
 
 const steps = [
   {
-    number: "01",
-    icon: Lightbulb,
-    title: "Set up your account",
-    description: "Get started in minutes with a simple sign-up.",
-    color: "#0E8ECF",
+    icon: Step1,
+    title: "Install",
+    desc: "Add ObserveNow.AI from the Chrome Store in seconds.",
   },
   {
-    number: "02",
-    icon: GraduationCap,
-    title: "Install the Chrome Extension",
-    description: "Navigate smarter, directly from your browser.",
-    color: "#1177B9",
+    icon: Step2,
+    title: "Browse",
+    desc: "Visit LinkedIn profiles or company websites as usual.",
   },
   {
-    number: "03",
-    icon: ThumbsUp,
-    title: "Search Your Account List",
-    description: "Discover qualified leads with verified contacts and export instantly.",
-    color: "#1F5FBF",
-  },
-  {
-    number: "04",
-    icon: MessageCircle,
-    title: "Track & Grow with AI",
-    description: "Monitor account analytics and unlock AI tailored recommendations.",
-    color: "#2D3F99",
-  },
-  {
-    number: "05",
-    icon: Settings,
-    title: "Industry-Wise CXO Data",
-    description: "Pre-packaged, accurate, and ready to use.",
-    color: "#5A168A",
+    icon: Step3,
+    title: "Capture",
+    desc: "Get real-time data, signals, and save leads instantly.",
   },
 ];
 
-const CurvedArrow = ({ direction }: { direction: "up" | "down" }) => {
-  const isUp = direction === "up";
-
-  return (
-    <svg
-      width={isUp ? 90 : 160}
-      height="60"
-      viewBox="0 0 90 60"
-      fill="none"
-      className="text-muted-foreground/70"
-    >
-      {isUp ? (
-        <>
-          {/* Curve going up */}
-          <path
-            d="M0 50 C30 50, 30 10, 90 10"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeDasharray="5 5"
-            fill="none"
-          />
-          {/* Arrow head */}
-          <path
-            d="M82 4 L90 10 L82 16"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </>
-      ) : (
-        <>
-          {/* Curve going down */}
-          <path
-            d="M0 10 C30 10, 30 50, 90 50"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeDasharray="5 5"
-            fill="none"
-          />
-          {/* Arrow head */}
-          <path
-            d="M82 44 L90 50 L82 56"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </>
-      )}
-    </svg>
-  );
-};
 
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-20 bg-background overflow-x-hidden">
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
-          Turn <span className="violet-gradient-text">Data into Leads</span> in 5 Easy Steps
-        </h2>
+    <section className="pt-16 pb-10 bg-[#470277]/5 relative overflow-hidden">
+       <div className="container mx-auto px-4">
+        {/* Badge */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-8"
+        >
+          <span className="section-badge border border-[#470277]">Work Seamlessly</span>
+        </motion.div>
 
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-20">
-          From defining your target filters to extracting, cleaning, and verifying data, our system organizes everything into ready-to-use lead lists.
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Image Box */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 w-full"
+          >
+            <div
+              className="
+                aspect-[4/3] 
+                rounded-2xl 
+                bg-white 
+                border-2 
+                border-[#72339F]/40 
+                shadow-[0_12px_40px_rgba(114,51,159,0.15)]
+                p-6
+                flex 
+                items-center 
+                justify-center
+                duration-300 
+    ease-out
+    hover:-translate-y-2
+    hover:shadow-[0_12px_30px_rgba(114,51,159,0.12)]
+    hover:border-[#72339F]
+              "
+            >
+              {/* Replace this div with your actual image */}
+              {/* <div className="w-full h-full rounded-xl bg-gray-100" /> */}
+              <img 
+  src={FeatureLeftImg}
+  alt="Why Choose Us"
+  className="w-full h-full object-contain rounded-xl"
+/>
+
+            </div>
+          </motion.div>
+
+          {/* Content */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex-1 w-full"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+              Boost Prospecting with a
+            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold violet-gradient-text mb-6">
+              Chrome Extension
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              ObserveNow.AI runs as a lightweight Chrome Extension that supercharges prospecting directly on Linkedin and other sites websites in real time.
+            </p>
+
+            <div className="relative isolate space-y-6 mb-10">
+
+             <img
+    src={StepLine}
+    alt=""
+    className="absolute left-[18px] top-[16px] w-[1px] h-[160px] z-0 pointer-events-none"
+  />
+
+  {steps.map((step, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="relative flex items-start gap-4 z-10"
+    >
+      {/* Number Icon */}
+      <img
+        src={step.icon}
+        alt={step.title}
+        className="w-10 h-10 flex-shrink-0"
+      />
+
+      {/* Text */}
+      <div>
+        <h4 className="font-semibold text-lg">{step.title}</h4>
+        <p className="text-muted-foreground text-sm">
+          {step.desc}
         </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
 
-        {/* Steps */}
-        <div className="flex justify-between items-start max-w-6xl mx-auto relative">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
-            const isUp = index % 2 === 1;
-            const showArrow = index < steps.length - 1;
 
-            return (
-              <div
-                key={index}
-                className="relative flex flex-col items-center w-[200px]"
-                style={{
-                  marginTop: isUp ? "0px" : "80px",
-                }}
-              >
-                {/* Icon */}
-                <div className="relative mb-6">
-                  <span className="absolute -top-6 -left-6 text-6xl font-bold text-muted/20">
-                    {step.number}
-                  </span>
-
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className="w-20 h-20 rounded-full flex items-center justify-center shadow-lg relative z-10"
-                    style={{ backgroundColor: step.color }}
-                  >
-                    <Icon className="w-8 h-8 text-white" />
-                  </motion.div>
-                </div>
-
-                <h4 className="font-semibold text-foreground text-center mb-2">
-                  {step.title}
-                </h4>
-
-                <p className="text-sm text-muted-foreground text-center">
-                  {step.description}
-                </p>
-
-                {/* Arrow */}
-                {/* Arrow */}
-{showArrow && (
-  <div
-    className="absolute pointer-events-none"
-    style={{
-      top: isUp ? "28px" : "52px",   // aligns with icon center
-      left: "100%",
-      marginLeft: isUp ? "-50px" : "-60px",           // small gap from icon
-    }}
-  >
-    <CurvedArrow direction={isUp ? "down" : "up"} />
-  </div>
-)}
-
-              </div>
-            );
-          })}
+            <Button 
+              size="lg" 
+              className="btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet"
+            >
+              ADD TO CHROME – IT’S FREE!
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </motion.div>
         </div>
       </div>
+
+      {/* Bottom-right decorative puzzle */}
+<img
+  src={PuzzleDeco}
+  alt=""
+  className="absolute -bottom-14 right-0 w-[240px] opacity-100 "
+/>
+
+    
+      
     </section>
   );
 };
 
-export default HowItWorksSection;
-
-
-
+export default HowItWorksSection
 

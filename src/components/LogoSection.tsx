@@ -21,7 +21,7 @@ const LogoSection = () => {
 
           {/* Trusted Badge */}
           <div className="absolute -top-5 left-1/2 -translate-x-1/2">
-            <span className="section-badge shadow-lg">
+            <span className="section-badge border border-[#470277] shadow-lg">
                Trusted by 500+ Fortune companies all over the world 
             </span>
           </div>

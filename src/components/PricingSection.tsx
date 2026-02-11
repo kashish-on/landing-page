@@ -77,12 +77,22 @@ const PricingSection = () => {
     <section id="pricing" className="py-24 bg-background">
       <div className="container mx-auto px-4">
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
+          <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-6"
+        >
+          <span className="section-badge border border-[#470277]">Our Pricing</span>
+        </motion.div>
+      
           <h2 className="text-4xl md:text-5xl font-bold">
-            Simple, Transparent <span className="violet-gradient-text">Pricing</span>
+            Starter Plan - Perfect for <br />
+            <span className="violet-gradient-text">Growing Teams</span>
           </h2>
-          <p className="text-muted-foreground mt-3">
-            Choose the plan that fits your growth stage.
+          <p className="text-muted-foreground mt-5">
+            Get reliable data extraction and verified leads without the complexity. Designed for startup and small businesses and Enterprises this plan helps you generate high-quality leads and kickstart your growth journey with ease.
           </p>
         </div>
 
@@ -96,13 +106,13 @@ const PricingSection = () => {
               viewport={{ once: true }}
               className={`relative bg-white rounded-3xl border transition-all overflow-hidden ${
                 plan.popular
-                  ? "border-[#72339F] shadow-[0_20px_60px_rgba(114,51,159,0.25)]"
-                  : "border-border"
+                  ? "border-2 border-[#470277] shadow-[0_8px_20px_rgba(71,2,119,0.35)]"
+                  : "border border-border"
               }`}
             >
               {/* MOST POPULAR STRIP */}
               {plan.popular && (
-                <div className="absolute -left-[2px] -right-[2px] -top-[2px] h-10 btn-gradient text-white text-xs font-semibold text-center rounded-none z-20 shadow-md">
+                <div className="absolute left-[1px] right-[1px] -top-[1px] h-10 btn-gradient text-white text-xs pointer-events-none font-semibold text-center rounded-t-[22px] rounded-none z-20 shadow-md flex items-center justify-center pt-1">
                   ✦ MOST POPULAR
                 </div>
               )}

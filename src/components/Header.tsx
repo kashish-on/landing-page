@@ -70,7 +70,7 @@ const Header = () => {
                className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] group shadow-lg hover:shadow-xl transition-all button"
               //className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-7 py-5 text-sm group shadow-lg hover:shadow-xl transition-all"
             >
-              <a href="https://observenow.ai/login.html" className="flex items-center button gap-2">
+              <a href="https://observenow.ai/login.html" className="flex items-center gap-2">
                 <LogIn className="w-4 h-4" />
                 LOGIN
               </a>

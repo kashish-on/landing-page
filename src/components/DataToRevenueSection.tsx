@@ -1,5 +1,6 @@
 import { Megaphone, Heart, BarChart3, ClipboardCheck, Mic, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import AnalyticsSection from "@/components/AnalyticsSection";
 
 import IconUsers from "@/assets/user.svg";
 
@@ -47,7 +48,7 @@ const DataToRevenueSection = () => {
           viewport={{ once: true }}
           className="flex justify-center mb-8"
         >
-          <span className="section-badge">Data-driven Strategy</span>
+          <span className="section-badge border border-[#470277]">Data-driven Strategy</span>
         </motion.div>
 
         {/* Heading */}
@@ -138,6 +139,8 @@ const DataToRevenueSection = () => {
             ))}
           </div>
         </div>
+
+        <AnalyticsSection />
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

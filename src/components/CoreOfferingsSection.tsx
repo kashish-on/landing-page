@@ -13,7 +13,7 @@ const CoreOfferingsSection = () => {
           viewport={{ once: true }}
           className="flex justify-center mb-8"
         >
-          <span className="section-badge">Core Offerings</span>
+          <span className="section-badge border border-[#470277]">Core Offerings</span>
         </motion.div>
 
         {/* Heading */}

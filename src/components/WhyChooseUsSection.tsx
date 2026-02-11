@@ -23,7 +23,7 @@ const marqueeItems = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#470277]/5 to-background overflow-hidden">
+    <section className="pt-16 pb-0 bg-[#470277]/5 overflow-hidden">
        <div className="container mx-auto px-4">
         {/* Badge */}
         <motion.div 
@@ -32,7 +32,7 @@ const WhyChooseUsSection = () => {
           viewport={{ once: true }}
           className="flex justify-center mb-8"
         >
-          <span className="section-badge">Why Choose Us</span>
+          <span className="section-badge border border-[#470277]">Why Choose Us</span>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -121,7 +121,7 @@ const WhyChooseUsSection = () => {
     
 
       {/* Marquee */}
-      <div className="mt-16 py-4 bg-violet-100/50 overflow-hidden">
+      <div className="mt-16 py-4 bg-[#0B87BA]/10 overflow-hidden">
         <motion.div 
           className="whitespace-nowrap flex"
           animate={{ x: [0, -1000] }}

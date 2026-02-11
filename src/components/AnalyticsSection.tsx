@@ -3,11 +3,11 @@ import InDepthMonitoringIcon from "@/assets/in-depth-monitoring.svg";
 
 const AnalyticsSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-5 pb-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Badge */}
         <div className="flex justify-center mb-8">
-          <span className="section-badge">Customizations & Analysis</span>
+          <span className="section-badge border border-[#470277]">Customizations & Analysis</span>
         </div>
 
         {/* Heading */}
