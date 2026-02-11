@@ -2,7 +2,7 @@
 import google from "@/assets/google.png";
 import microsoft from "@/assets/microsoft.png";
 import ibm from "@/assets/ibm.png";
-import ntt from "@/assets/ntt.png";
+import ntt from "@/assets/ntt-logo.png";
 import { Star } from "lucide-react";
 
 const logos = [
