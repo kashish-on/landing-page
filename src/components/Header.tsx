@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import logo from "@/assets/observenow_ai.png";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, LogIn } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -51,6 +52,7 @@ const Header = () => {
             >
               Contact Sales
             </a>
+            
           </div>
 
           {/* CTA Buttons */}
