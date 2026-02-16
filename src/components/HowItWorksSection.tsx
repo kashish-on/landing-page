@@ -10,7 +10,7 @@ import StepLine from "@/assets/step-line.png";
 
 import PuzzleDeco from "@/assets/puzzle.png";
 
-import FeatureLeftImg from "@/assets/work-seamlessly.jpeg";
+import FeatureLeftImg from "@/assets/work-seamlessly1.png";
 
 const steps = [
   {
@@ -63,7 +63,7 @@ const HowItWorksSection = () => {
                 border-2 
                 border-[#72339F]/40 
                 shadow-[0_12px_40px_rgba(114,51,159,0.15)]
-                p-6
+                p-4 md:p-5
                 flex 
                 items-center 
                 justify-center

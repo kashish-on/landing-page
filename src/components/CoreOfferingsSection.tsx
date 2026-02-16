@@ -84,7 +84,7 @@ const CoreOfferingsSection = () => {
 
           <div className="relative z-10 text-center">
             <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary-foreground mb-8">
-              Find Verified Leads - Establish connect - Secure Business
+              Find Verified Leads - Establish Connect - Secure Business
             </h3>
             <Button 
               size="lg" 

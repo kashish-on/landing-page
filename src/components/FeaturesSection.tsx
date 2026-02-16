@@ -1,10 +1,10 @@
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 
-import FeatureImg1 from "@/assets/img1.png";
-import FeatureImg2 from "@/assets/img2.png";
-import FeatureImg3 from "@/assets/img3.png";
-import FeatureImg4 from "@/assets/img4.png";
+import FeatureImg1 from "@/assets/img1.gif";
+import FeatureImg2 from "@/assets/img2.gif";
+import FeatureImg3 from "@/assets/img3.gif";
+import FeatureImg4 from "@/assets/img4.gif";
 
 
 const features = [
