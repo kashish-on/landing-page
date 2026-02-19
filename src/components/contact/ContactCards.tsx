@@ -30,11 +30,11 @@ const cards = [
 const ContactCards = () => {
   return (
     <section className="py-6 md:py-10 bg-background">
-      <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div className="font-dm max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6">
         {cards.map((card) => (
           <div
             key={card.title}
-            className="bg-card rounded-2xl border border-border p-8 text-center shadow-sm hover:shadow-md transition-shadow"
+            className="bg-card font-dm rounded-2xl border border-border p-8 text-center shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="w-14 h-14 mx-auto rounded-xl bg-secondary flex items-center justify-center mb-4">
               <img
@@ -44,8 +44,8 @@ const ContactCards = () => {
 />
 
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-1">{card.title}</h3>
-            <p className="text-sm text-muted-foreground mb-3">{card.subtitle}</p>
+            <h3 className="text-lg font-dm font-bold text-foreground mb-1">{card.title}</h3>
+            <p className="text-sm font-dm text-muted-foreground mb-3">{card.subtitle}</p>
             <a
               href={card.href}
               className="text-sm font-semibold text-[#470277] hover:underline"

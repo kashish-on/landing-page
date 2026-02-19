@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import jeetImg from "@/assets/jeet.png";
 import taniyaImg from "@/assets/taniya.png";
 
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
 import linkedinIcon from "@/assets/linkedin-icon.png";
 
 const founders = [
@@ -21,14 +24,32 @@ const founders = [
 
 const TeamSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-8 pb-20 bg-background">
       <div className="container mx-auto px-4 max-w-6xl text-center">
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-3">
-          The Minds behind <span className="text-[#72339F]">The Magic</span>
-        </h2>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-5 mt-10"
+        >
+          <span className="section-badge border border-[#470277]">
+            Meet The Founders
+          </span>
+        </motion.div>
 
-        <p className="text-muted-foreground max-w-xl mx-auto mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center max-w-4xl mx-auto mb-8"
+        >
+          <h1 className="text-4xl font-sora md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            The Minds behind <span className="text-[#72339F]/80 font-sora">The Magic</span>
+          </h1>
+        </motion.div>
+
+        <p className="font-sora text-sm text-muted-foreground max-w-2xl mx-auto mb-12">
           We're building the future of digital interactions with a touch of elegance and a lot of heart
         </p>
 
@@ -37,10 +58,10 @@ const TeamSection = () => {
           {founders.map((f) => (
             <div
               key={f.name}
-              className="relative rounded-[28px] overflow-hidden bg-gradient-to-b from-[#470277]/20 via-[#8F6DB8]/20 to-[#FFFFFF] pt-6 px-6 pb-0 w-[400px] h-[550px] max-w-full mx-auto flex flex-col"
+              className="font-sora relative rounded-[28px] overflow-hidden bg-gradient-to-b from-[#470277]/30 via-[#8F6DB8]/20 to-[#FFFFFF] pt-6 px-6 pb-0 w-[400px] h-[550px] max-w-full mx-auto flex flex-col"
             >
               <div className="flex items-center gap-2 text-white mb-1">
-                <h3 className="font-semibold text-lg text-white">{f.name}</h3>
+                <h3 className="font-sora font-semibold text-lg text-white">{f.name}</h3>
                 <a
     href={f.linkedin}
     target="_blank"
@@ -70,10 +91,18 @@ const TeamSection = () => {
 
         {/* CTA */}
         <div className="relative max-w-5xl mx-auto rounded-[28px] bg-[#7C4DA6] text-white px-10 py-12 overflow-hidden">
-          <div className="absolute -top-4 left-48 w-[110px] h-[110px] bg-white/10 rounded-full" />
-          <div className="absolute -top-2 -right-12 w-[110px] h-[110px] bg-white/10 rounded-full" />
-          <div className="absolute -bottom-12 right-1 w-[110px] h-[110px] bg-white/10 rounded-full" />
-          <div className="absolute -bottom-12 -left-9 w-[110px] h-[110px] bg-white/10 rounded-full" />
+          <motion.div className="absolute -top-4 left-48 w-[110px] h-[110px] bg-white/10 rounded-full"
+           animate={{ y: [0, -10, 0], scale: [1, 1.05, 1] }}
+           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div className="absolute -top-2 -right-12 w-[110px] h-[110px] bg-white/10 rounded-full" animate={{ y: [0, -10, 0], scale: [1, 1.05, 1] }}
+    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} />
+
+          <motion.div className="absolute -bottom-12 right-1 w-[110px] h-[110px] bg-white/10 rounded-full" animate={{ y: [0, -10, 0], scale: [1, 1.05, 1] }}
+    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} />
+
+          <motion.div className="absolute -bottom-12 -left-9 w-[110px] h-[110px] bg-white/10 rounded-full" animate={{ y: [0, -10, 0], scale: [1, 1.05, 1] }}
+    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}/>
           
 
           <h3 className="text-2xl md:text-3xl font-semibold mb-2">
@@ -84,10 +113,21 @@ const TeamSection = () => {
             Try ObserveNow free and access verified contacts, intelligent filters, and real-time insights in minutes.
           </p>
 
-          <button className="mx-auto flex items-center justify-center gap-2 bg-white text-[#5C2E88] rounded-full w-[176px] h-[44px] text-xs font-semibold shadow-md hover:scale-105 transition-transform duration-200">
+          {/* <button className="button mx-auto flex items-center justify-center gap-2 whitespace-nowrap bg-white text-[#5C2E88] rounded-full w-[176px] h-[44px] text-xs font-semibold shadow-md hover:scale-105 transition-transform duration-200">
+            <a href="https://dashboard.observenow.ai/login" className="flex items-center gap-2">
             GET STARTED 
             <span className="text-base">→</span>
-          </button>
+            </a>
+          </button> */}
+          <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-gray-100 px-8 py-6 text-base font-semibold group shadow-lg"
+            >
+              <a href="https://dashboard.observenow.ai/login" className="flex items-center gap-2">
+              GET STARTED
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
         </div>
 
       </div>

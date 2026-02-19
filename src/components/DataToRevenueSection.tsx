@@ -57,16 +57,16 @@ const DataToRevenueSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
+          className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
         >
-          From Data to <span className="violet-gradient-text">Revenue</span>
+          From Data to <span className="text-[#72339F]/80 font-sora">Revenue</span>
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-center text-muted-foreground max-w-2xl mx-auto mb-16"
+          className="font-sora text-center text-muted-foreground max-w-2xl mx-auto mb-16"
         >
           A structured 5-stage approach that transforms raw lead data into targeted outreach, smarter decisions, and sales growth.
         </motion.p>
@@ -153,7 +153,7 @@ const DataToRevenueSection = () => {
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
               // className="bg-card rounded-2xl p-6 border-2 border-primary/20 hover:border-primary/50 transition-colors text-center shadow-card"
-              className="bg-card rounded-2xl p-6 border-2 border-[#72339F] transition-colors text-center shadow-[0_8px_24px_rgba(114,51,159,0.15)]"
+              className="font-sora bg-card rounded-2xl p-6 border-2 border-[#72339F] transition-colors text-center shadow-[0_8px_24px_rgba(114,51,159,0.15)]"
             >
               {/* <div className="w-6 h-6 bg-[#72339F] rounded-xl mx-auto mb-4 flex items-center justify-center">
                 <stat.icon className="w-4 h-4 text-white" />
@@ -166,8 +166,8 @@ const DataToRevenueSection = () => {
   />
 </div>
 
-              <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+              <div className="font-sora text-3xl font-bold text-foreground mb-1">{stat.value}</div>
+              <div className="font-sora text-sm text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
         </div>

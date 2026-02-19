@@ -2,12 +2,25 @@ import { ArrowRight, Mail, Phone, Star, StarHalf} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
+// import googleLogo from "@/assets/G logo.webp";
+import microsoftLogo from "@/assets/Mi logo.png";
+import metaLogo from "@/assets/meta logo.webp";
+import appleLogo from "@/assets/apple logo.png";
+import facebookLogo from "@/assets/f-logo.png";
+
+import ashleyImg from "@/assets/ashley.png";
+import michaelImg from "@/assets/michael.png";
+import sarahImg from "@/assets/sarah.jpeg";
+import davidImg from "@/assets/david.jpeg";
+import emmaImg from "@/assets/emma.png";
+import { NavLink } from "./NavLink";
+
 const contactCards = [
-  { name: "Ashley Stapleton", role: "Director of Tech", company: "Dealsforce", email: "ashley@dealsforce.com", phone: "(323) 463-4001" },
-  { name: "Michael Chen", role: "VP of Sales", company: "TechCorp", email: "michael@techcorp.com", phone: "(415) 555-0123" },
-  { name: "Sarah Johnson", role: "CEO", company: "StartupAI", email: "sarah@startupai.com", phone: "(628) 555-0456" },
-  { name: "David Kim", role: "CTO", company: "DataFlow", email: "david@dataflow.io", phone: "(510) 555-0789" },
-  { name: "Emma Wilson", role: "Head of Growth", company: "ScaleUp", email: "emma@scaleup.co", phone: "(650) 555-0321" },
+  { name: "Ashley Stapleton", role: "Director of Tech", company: "Facebook", email: "ashley@dealsforce.com", phone: "(323) 463-4001", logo: facebookLogo, img: ashleyImg },
+  { name: "Michael Chen", role: "VP of Sales", company: "Microsoft", email: "michael@techcorp.com", phone: "(415) 555-0123", logo: microsoftLogo, img: michaelImg },
+  { name: "Sarah Johnson", role: "CEO", company: "Meta", email: "sarah@startupai.com", phone: "(628) 555-0456", logo: metaLogo, img: sarahImg },
+  { name: "David Kim", role: "CTO", company: "Microsoft", email: "david@dataflow.io", phone: "(510) 555-0789", logo: microsoftLogo, img: davidImg },
+  { name: "Emma Wilson", role: "Head of Growth", company: "Apple", email: "emma@scaleup.co", phone: "(650) 555-0321", logo: appleLogo, img: emmaImg },
 ];
 
 const HeroSection = () => {
@@ -15,10 +28,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-violet-50/50 pt-28 md:pt-32 pb-32">
-      {/* Decorative gradient blob */}
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-violet-200/30 to-blue-200/30 rounded-full blur-3xl" /> */}
-      
-      {/* Center purple glow (exact middle gradient like reference) */}
 <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
   <div
     className="mt-[220px] w-[1400px] h-[900px] rounded-full blur-[160px] opacity-70"
@@ -58,14 +67,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center max-w-4xl mx-auto mb-8"
+          className="text-center max-w-6xl mx-auto mb-8"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
             Your Business Growth Engine
             <br />
-            Smarter with <span className="text-[#72339F]">ObserveNow AI</span>
+            Smarter with <span className="text-[#72339F]/80">ObserveNow.AI</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-sora text-lg md:text-base text-muted-foreground max-w-none mx-auto">
             Smarter targeting, deeper insights, and real decision-maker connections — all in 3 clicks.
           </p>
         </motion.div>
@@ -78,13 +87,24 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
         >
           <Button size="lg" className="btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet">
+            <a href="https://dashboard.observenow.ai/signup" className="flex items-center gap-2">
             GET FREE TRIAL
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
-          <Button size="lg" variant="outline" className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all">
+          {/* <Button size="lg" variant="outline" className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all">
             CONTACT SALES
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          </Button> */}
+          <NavLink to="/contact">
+  <Button
+    size="lg"
+    className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all"
+  >
+    CONTACT SALES
+    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+  </Button>
+</NavLink>
         </motion.div>
 
         {/* Rating */}
@@ -134,14 +154,30 @@ const HeroSection = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="relative mb-3">
-                  <div className="w-full h-40 bg-gradient-to-br from-violet-100 to-blue-100 rounded-xl overflow-hidden">
+                  {/* <div className="w-full h-40 bg-gradient-to-br from-violet-100 to-blue-100 rounded-xl overflow-hidden">
                     <div className="w-full h-full bg-gradient-to-br from-violet-200/50 to-transparent flex items-center justify-center">
                       <div className="w-20 h-20 bg-gradient-to-br from-violet-300 to-violet-400 rounded-full" />
                     </div>
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+                  </div> */}
+                  {/* <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
                     <span className="text-white text-xs font-bold">H</span>
-                  </div>
+                  </div> */}
+                  <div className="w-full h-40 rounded-xl overflow-hidden bg-violet-100">
+  <img
+    src={card.img}
+    alt={card.name}
+    className="w-full h-full object-cover"
+  />
+</div>
+
+                  <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-md border">
+  <img
+    src={card.logo}
+    alt={card.company}
+    className="w-6 h-6 object-contain"
+  />
+</div>
+
                 </div>
                 <h4 className="font-semibold text-foreground">{card.name}</h4>
                 <p className="text-sm text-muted-foreground mb-3">

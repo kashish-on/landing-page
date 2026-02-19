@@ -33,11 +33,11 @@ const ContactForm = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto mb-8"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            How can we <span className="text-[#72339F]">Help</span>
+          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            How can we <span className="text-[#72339F]/80 font-sora">Help</span>
           </h1>
         </motion.div>
-        <p className="text-muted-foreground text-sm text-center max-w-lg mx-auto mb-10">
+        <p className="font-sora text-muted-foreground text-sm text-center max-w-3xl mx-auto mb-10">
           Reach out today and unlock smarter lead generation with verified data and AI-powered insights.
         </p>
 

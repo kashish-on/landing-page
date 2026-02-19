@@ -22,9 +22,9 @@ const CoreOfferingsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16"
+          className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16"
         >
-          Your <span className="violet-gradient-text">Next-Gen Sales</span>
+          Your <span className="text-[#72339F]/80">Next-Gen Sales</span>
           <br />
           Intelligence Engine
         </motion.h2>
@@ -35,7 +35,7 @@ const CoreOfferingsSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="relative max-w-5xl mx-auto bg-[hsl(var(--brand-violet))] rounded-3xl p-8 md:p-12 overflow-hidden"
+          className="relative max-w-5xl mx-auto bg-[hsl(var(--brand-violet)/90%)] rounded-3xl p-8 md:p-12 overflow-hidden"
         >
 
 {/* Animated Chevrons Background */}
@@ -83,15 +83,17 @@ const CoreOfferingsSection = () => {
 
 
           <div className="relative z-10 text-center">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-primary-foreground mb-8">
+            <h3 className="font-sora text-xl md:text-2xl lg:text-3xl font-bold text-primary-foreground mb-8">
               Find Verified Leads - Establish Connect - Secure Business
             </h3>
             <Button 
               size="lg" 
               className="bg-white text-primary hover:bg-gray-100 px-8 py-6 text-base font-semibold group shadow-lg"
             >
+              <a href="https://dashboard.observenow.ai/login" className="flex items-center gap-2">
               GET STARTED
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
         </motion.div>

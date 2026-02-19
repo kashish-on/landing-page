@@ -114,11 +114,11 @@ const IntegrationsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
+            className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
           >
             Technologies Behind Our
             <br />
-            <span className="violet-gradient-text">Solutions</span>
+            <span className="text-[#72339F]/80 font-sora">Solutions</span>
           </motion.h2>
 
           <motion.p 
@@ -126,7 +126,7 @@ const IntegrationsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-center text-muted-foreground max-w-2xl mx-auto mb-8"
+            className="font-sora text-center text-sm text-muted-foreground max-w-2xl mx-auto mb-8"
           >
             Unlike generic data tools, DataGen is powered by advanced tech that ensures accuracy, freshness, and scalability. Experience the difference with our verified lead engines and updated CXO databases.
           </motion.p>
@@ -140,8 +140,10 @@ const IntegrationsSection = () => {
             className="flex justify-center"
           >
             <Button size="lg" className="btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet">
+              <a href="https://dashboard.observenow.ai/signup" className="flex items-center gap-2">
               START YOUR FREE TRIAL
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </motion.div>
           </div>

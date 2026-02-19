@@ -67,7 +67,7 @@ const cards = [
 
 const MissionVision = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-4 pb-16 bg-background">
       <div className="container mx-auto px-4 max-w-7xl text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -87,12 +87,12 @@ const MissionVision = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto mb-8"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            Our <span className="text-[#72339F]">Mission & Vision</span>
+          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            Our <span className="text-[#72339F]/80 font-sora">Mission & Vision</span>
           </h1>
         </motion.div>
 
-        <p className="text-muted-foreground text-base max-w-2xl mx-auto mb-12">
+        <p className="font-sora text-sm text-muted-foreground text-base max-w-4xl mx-auto mb-12">
           Guiding how we build AI-powered intelligence that helps teams connect faster, sell smarter, and grow with confidence.
           </p>
 
@@ -131,7 +131,7 @@ const MissionVision = () => {
 
               {card.type === "mission" ? (
                 <div className="text-left mt-16 max-w-[65%]">
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-2xl font-sora font-bold text-foreground mb-3">
                     {card.title}
                   </h3>
                   <p className="text-[13px] text-muted-foreground leading-relaxed">
@@ -140,7 +140,7 @@ const MissionVision = () => {
                 </div>
               ) : card.type === "vision" ? (
                 <div className="text-left mt-16 max-w-[70%]">
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-2xl font-sora font-bold text-foreground mb-3">
                     {card.title}
                   </h3>
                   <p className="text-[13px] text-left text-muted-foreground leading-relaxed">
@@ -154,7 +154,7 @@ const MissionVision = () => {
                       <img src={card.icon} alt={card.title} className="w-12 h-12" />
                     )}
                   </div>
-                  <h4 className="font-semibold text-foreground mb-2">{card.title}</h4>
+                  <h4 className="font-sora font-semibold text-foreground mb-2">{card.title}</h4>
                   <p className="text-sm text-muted-foreground">{card.desc}</p>
                 </div>
               ) : (
@@ -169,12 +169,12 @@ const MissionVision = () => {
         }`}
       >
         {!isBottomStat && (
-          <span className="text-sm text-muted-foreground mb-2">
+          <span className="text-sm font-sora text-muted-foreground mb-2">
             {card.title}
           </span>
         )}
 
-        <div className="text-2xl md:text-3xl font-extrabold text-foreground leading-none mb-1">
+        <div className="text-2xl font-sora md:text-3xl font-extrabold text-foreground leading-none mb-1">
           {card.value}
         </div>
 

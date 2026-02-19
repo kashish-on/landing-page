@@ -87,11 +87,11 @@ const PricingSection = () => {
           <span className="section-badge border border-[#470277]">Our Pricing</span>
         </motion.div>
       
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="font-sora text-4xl md:text-5xl font-bold">
             Starter Plan - Perfect for <br />
-            <span className="violet-gradient-text">Growing Teams</span>
+            <span className="text-[#72339F]/80 font-sora">Growing Teams</span>
           </h2>
-          <p className="text-muted-foreground mt-5">
+          <p className="font-sora text-muted-foreground mt-4">
             Get reliable data extraction and verified leads without the complexity. Designed for startup and small businesses and Enterprises this plan helps you generate high-quality leads and kickstart your growth journey with ease.
           </p>
         </div>
@@ -187,15 +187,36 @@ const PricingSection = () => {
                 </ul>
 
                 {/* BUTTON */}
-                <Button
+                {/* <Button
                   className={`w-full py-6 text-base ${
                     plan.popular
                       ? "btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet"
                       : "bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all"
                   }`}
                 >
+                  <a href="https://dashboard.observenow.ai/login" className="flex items-center gap-2">
                   Get Started <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+                  </a>
+                </Button> */}
+
+                <Button
+  asChild
+  className={`w-full py-6 text-base ${
+    plan.popular
+      ? "btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet"
+      : "bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all"
+  }`}
+>
+  <a
+    href="https://dashboard.observenow.ai/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2"
+  >
+    Get Started <ArrowRight className="ml-2 w-4 h-4" />
+  </a>
+</Button>
+
 
                 {/* BOTTOM PRICE */}
                 <p className="text-xs text-muted-foreground text-center mt-4">

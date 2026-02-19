@@ -11,12 +11,12 @@ const AnalyticsSection = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
-          We Make It <span className="violet-gradient-text">Easy To Track</span> All User
+        <h2 className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
+          We Make It <span className="text-[#72339F]/80 font-sora">Easy To Track</span> All User
           <br />
           Analytics
         </h2>
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16">
+        <p className="font-sora text-center text-muted-foreground max-w-2xl mx-auto mb-16">
           All the generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
         </p>
 

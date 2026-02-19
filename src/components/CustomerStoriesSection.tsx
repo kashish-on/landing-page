@@ -91,11 +91,11 @@ const CustomerStoriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
+          className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
         >
-          How Our Customers Use <span className="violet-gradient-text">Our</span>
+          How Our Customers Use <span className="text-[#72339F]/80 font-sora">Our</span>
           <br />
-          <span className="violet-gradient-text">Product to Succeed</span>
+          <span className="text-[#72339F]/80 font-sora">Product to Succeed</span>
         </motion.h2>
 
         <motion.p 
@@ -103,13 +103,13 @@ const CustomerStoriesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-center text-muted-foreground max-w-2xl mx-auto mb-8"
+          className="font-sora text-center text-muted-foreground max-w-2xl mx-auto mb-8"
         >
           See how businesses achieve real results with DataGen — from verified leads to faster conversions.
         </motion.p>
 
         {/* CTA */}
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -120,7 +120,7 @@ const CustomerStoriesSection = () => {
             READ CUSTOMER STORY
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-        </motion.div>
+        </motion.div> */}
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -143,7 +143,7 @@ const CustomerStoriesSection = () => {
               >
                 {item.type === "stat" ? (
                   <div>
-                    <div className="text-4xl font-bold text-foreground mb-2">{item.value}</div>
+                    <div className="font-sora text-4xl font-bold text-foreground mb-2">{item.value}</div>
                     <div className="text-muted-foreground mb-8">{item.label}</div>
                     <div className="flex items-center gap-2">
                       <img

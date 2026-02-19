@@ -31,7 +31,7 @@ const values = [
 
 const CoreValues = () => {
   return (
-    <section className="relative gradient-hero-bg py-20 bg-[#470277]/5 text-center overflow-hidden">
+    <section className="relative gradient-hero-bg pt-4 pb-20 bg-[#470277]/5 text-center overflow-hidden">
       <div className="container mx-auto px-4 max-w-5xl text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ const CoreValues = () => {
           className="flex justify-center mb-8 mt-10"
         >
           <span className="section-badge border border-[#470277]">
-            Platform Overview
+            Core Values
           </span>
         </motion.div>
 
@@ -50,12 +50,12 @@ const CoreValues = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto mb-8"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            What we <span className="text-[#72339F]">Stand for</span>
+          <h1 className="text-4xl font-sora md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            What we <span className="text-[#72339F]/80 font-sora">Stand for</span>
           </h1>
         </motion.div>
 
-        <p className="text-muted-foreground text-base max-w-2xl mx-auto mb-14">
+        <p className="font-sora text-sm text-muted-foreground text-base max-w-4xl mx-auto mb-14">
           Guiding how we build AI-powered intelligence that helps teams connect faster, sell smarter, and grow with confidence.
         </p>
 

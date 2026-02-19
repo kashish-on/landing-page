@@ -1,14 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 import GridPattern from "@/assets/white-grid.svg";
 
 const HeroSection = () => {
   return (
-    <section className="relative gradient-hero-bg bg-[#470277]/5 overflow-hidden pt-16 pb-6 md:pt-24 md:pb-8 text-center">
-       {/* Center purple glow */}
-<div className="pointer-events-none absolute inset-0 flex items-center justify-center translate-y-48">
+    <section className="relative gradient-hero-bg bg-[#470277]/5 pt-10 pb-16 md:pt-24 md:pb-15 text-center overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 flex items-center justify-center translate-y-48">
   <div
     className="w-[900px] h-[500px] rounded-full blur-[50px] opacity-100"
     style={{
@@ -24,17 +23,18 @@ const HeroSection = () => {
   alt=""
   className="pointer-events-none absolute inset-0 w-full h-full object-cover opacity-30"
 />
-
-      <div className="relative z-10 max-w-3xl mx-auto px-4">
-        {/* Badge */}
-        <motion.div 
+      {/* Decorative gradient bar at top */}
+      {/* <div className="absolute top-0 left-0 right-0 h-1 gradient-brand" /> */}
+      
+      <div className="relative z-10 container mx-auto px-4 max-w-3xl">
+         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center mb-8 mt-10"
+          className="flex justify-center mb-3 mt-16"
         >
           <span className="section-badge border border-[#470277]">
-            Get In Touch
+            Our Plans
           </span>
         </motion.div>
 
@@ -43,19 +43,18 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center max-w-4xl mx-auto mb-8"
+          className="text-center max-w-4xl mx-auto mb-6"
         >
-          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            We're Here to <span className="text-[#72339F]/80 font-sora">Help</span>
+          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-center whitespace-nowrap">
+            Unlock High-Intent <span className="text-[#72339F]/80">Growth</span>
           </h1>
         </motion.div>
 
-        {/* Subtitle */}
-        <p className="font-sora text-muted-foreground text-sm md:text-base max-w-2xl mx-auto mb-8">
-          Have questions about our data, features, or pricing? Our team is here to help you find the right insights, contacts, and strategy to accelerate your pipeline.
+        <p className="font-sora text-muted-foreground text-base md:text-lg mb-6 max-w-2xl mx-auto">
+          Powerful data, verified contacts, and real-time insights - packaged in plans designed for performance.
         </p>
 
-        {/* CTA */}
+         {/* CTA */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,8 +62,10 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-2"
         >
           <Button size="lg" className="btn-gradient button text-primary-foreground text-base group shadow-violet">
-            TALK TO OUR TEAM
+            <a href="https://dashboard.observenow.ai/signup" className="flex items-center gap-2">
+            START YOUR FREE TRIAL
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </motion.div>
       </div>

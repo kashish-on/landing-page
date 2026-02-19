@@ -36,13 +36,13 @@ const features = [
 
 const PlatformOverview = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="pt-4 pb-16 bg-background">
       <div className="container mx-auto px-4 max-w-5xl text-center">
          <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center mb-8 mt-10"
+          className="flex justify-center mb-5 mt-10"
         >
           <span className="section-badge border border-[#470277]">
             Platform Overview
@@ -55,13 +55,13 @@ const PlatformOverview = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto mb-8"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            About <span className="text-[#72339F]">DataGen</span>
+          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            About <span className="text-[#72339F]/80 font-sora">ObserveNow.AI</span>
           </h1>
         </motion.div>
 
-        <p className="text-muted-foreground text-base max-w-2xl mx-auto mb-12">
-          DataGen by ObserveNow's AI-powered B2B lead enrichment platform designed to transform raw
+        <p className="font-sora text-sm text-muted-foreground text-base max-w-2xl mx-auto mb-12">
+          ObserveNow.AI by ObserveNow's AI-powered B2B lead enrichment platform designed to transform raw
           LinkedIn data into verified, actionable contact intelligence. With DataGen, businesses can instantly
           enrich profiles with real mobile numbers, work emails, personal emails, job roles, and firmographic
           data — all in one seamless workflow.
@@ -81,15 +81,14 @@ const PlatformOverview = () => {
       <div
         key={feature.title}
         className={`
-          rounded-xl border border-[#470277]/20 bg-card p-6 text-center 
-          min-h-[300px] flex flex-col items-center justify-start
+          font-dm text-center items-center rounded-xl border border-[#470277]/20 bg-card p-6 min-h-[300px] flex flex-col items-start justify-start text-left
           transition-all duration-300
           ${index % 2 === 1 ? "lg:translate-y-10" : "lg:-translate-y-4"}
           ${shadowMap[index]}
           hover:shadow-[0_20px_40px_rgba(71,2,119,0.35)]
         `}
       >
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
+        <div className="font-dm mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
           <img
             src={feature.icon}
             alt={feature.title}
@@ -97,11 +96,11 @@ const PlatformOverview = () => {
           />
         </div>
 
-        <h3 className="font-semibold text-foreground mb-2">
+        <h3 className="font-semibold items-center justify-center text-foreground mb-2">
           {feature.title}
         </h3>
 
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm leading-relaxed text-muted-foreground max-w-[240px]">
           {feature.description}
         </p>
       </div>

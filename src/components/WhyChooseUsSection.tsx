@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 import FeatureLeftImg from "@/assets/whychooseus.svg";
+import { NavLink } from "./NavLink";
 
 const features = [
   "AI-driven Contact + Account Intelligence",
@@ -82,13 +83,13 @@ const WhyChooseUsSection = () => {
             transition={{ duration: 0.6 }}
             className="flex-1 w-full"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            <h2 className="font-sora text-3xl md:text-4xl font-bold mb-2">
               Trusted Partner in
             </h2>
-            <h2 className="text-3xl md:text-4xl font-bold violet-gradient-text mb-6">
+            <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#72339F]/80 mb-6">
               Data-Driven Growth
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="font-sora text-muted-foreground mb-8">
               With advanced data extraction, verified lead generation, and a track record of powering faster conversions, helps businesses unlock real opportunities.
             </p>
 
@@ -107,7 +108,7 @@ const WhyChooseUsSection = () => {
                 </motion.div>
               ))}
             </div>
-
+          <NavLink to="/pricing">
             <Button 
               size="lg" 
               className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all"
@@ -115,6 +116,7 @@ const WhyChooseUsSection = () => {
               EXPLORE NOW
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+          </NavLink>
           </motion.div>
         </div>
       </div>

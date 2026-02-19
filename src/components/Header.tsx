@@ -16,44 +16,45 @@ const Header = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <nav className="flex items-center justify-between h-24">
-          
           {/* Logo */}
-          <a href="https://observenow.ai/" className="flex items-center h-full">
+          <NavLink to="/" className="flex items-center h-full">
             <img
               src={logo}
               alt="ObserveNow AI"
               className="h-full max-h-[100px] w-auto object-contain"
             />
-          </a>
+          </NavLink>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-12">
-            <a
-              href="https://observenow.ai/"
+            <NavLink
+              to="/"
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               Home
-            </a>
-            <a
-              href="https://observenow.ai/about.html"
+            </NavLink>
+
+            <NavLink
+              to="/about"
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               About
-            </a>
-            <a
-              href="https://observenow.ai/pricing.html"
+            </NavLink>
+
+            <NavLink
+              to="/pricing"
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               Pricing
-            </a>
-            <a
-              href="https://observenow.ai/contact.html"
+            </NavLink>
+
+            <NavLink
+              to="/contact"
               className="text-primary font-semibold"
             >
               Contact Sales
-            </a>
-            
-          </div>
+            </NavLink>
+            </div>
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-4">
@@ -61,7 +62,7 @@ const Header = () => {
               asChild
               className="btn-gradient text-primary-foreground px-7 py-5 text-sm group shadow-violet"
             >
-              <a href="https://observenow.ai/signup.html" className="flex items-center gap-2">
+              <a href="https://dashboard.observenow.ai/signup" className="flex items-center gap-2">
                 START YOUR FREE TRIAL
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -72,7 +73,7 @@ const Header = () => {
                className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] group shadow-lg hover:shadow-xl transition-all button"
               //className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-7 py-5 text-sm group shadow-lg hover:shadow-xl transition-all"
             >
-              <a href="https://observenow.ai/login.html" className="flex items-center gap-2">
+              <a href="https://dashboard.observenow.ai/login" className="flex items-center gap-2">
                 <LogIn className="w-4 h-4" />
                 LOGIN
               </a>

@@ -102,7 +102,7 @@ const FeaturesSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
-                  className="text-2xl md:text-3xl font-bold text-foreground mb-6"
+                  className="font-sora text-2xl md:text-3xl font-bold text-foreground mb-6"
                 >
                   {feature.title}
                 </motion.h3>

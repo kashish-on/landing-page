@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import logo from "@/assets/observenow_ai.png";
 import { Linkedin, Twitter, Instagram, Youtube, Mail } from "lucide-react";
 
+import MailIcon from "@/assets/Mail icon.svg";
+import { NavLink } from "./NavLink";
+
 const Footer = () => {
   return (
     <footer className="relative bg-white overflow-hidden">
@@ -16,7 +19,7 @@ const Footer = () => {
         {/* Newsletter */}
 <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-12 border-b border-black/10">
   <div>
-    <h3 className="text-3xl font-bold text-black mb-2">
+    <h3 className="font-sora text-3xl font-bold text-black mb-2">
       Subscribe our Newsletter
     </h3>
     <p className="text-black/60">
@@ -27,7 +30,12 @@ const Footer = () => {
   <div className="flex items-center gap-4 w-full max-w-xl">
     {/* Email Input */}
     <div className="flex items-center gap-3 bg-white rounded-full px-6 py-4 shadow w-full">
-      <Mail className="w-5 h-5 text-indigo-600" />
+      {/* <Mail className="w-5 h-5 text-indigo-600" /> */}
+      <img
+      src={MailIcon}
+      alt="Mail"
+      className="w-5 h-5"
+    />
       <input
         type="email"
         placeholder="Your Email Address"
@@ -36,11 +44,13 @@ const Footer = () => {
     </div>
 
     {/* Subscribe Button */}
+    <NavLink to="/">
     <button
      className="btn-gradient footer-btn shadow-violet"
 >
   SUBSCRIBE NOW
 </button>
+</NavLink>
 
   </div>
 </div>
@@ -86,7 +96,7 @@ const Footer = () => {
 
           {/* Useful Links */}
           <div>
-            <h4 className="font-semibold text-black text-lg leading-none">Useful Links</h4>
+            <h4 className="font-sora font-semibold text-black text-lg leading-none">Useful Links</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
                   className="absolute top-0 left-0 h-full w-1/4 rounded-full bg-gradient-to-r from-[#470277] to-[#0B87BA]"
@@ -105,7 +115,7 @@ const Footer = () => {
 
           {/* Help & Support */}
           <div className="inline-flex flex-col items-start">
-            <h4 className="font-semibold text-black text-lg leading-none">Help & Support</h4>
+            <h4 className="font-sora font-semibold text-black text-lg leading-none">Help & Support</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
                   className="absolute top-0 left-0 h-full w-1/4 rounded-full bg-gradient-to-r from-[#470277] to-[#0B87BA]"
@@ -123,7 +133,7 @@ const Footer = () => {
 
           {/* CTA */}
           <div>
-            <h4 className="font-semibold text-black text-lg leading-none">Lets Try out</h4>
+            <h4 className="font-sora font-semibold text-black text-lg leading-none">Lets Try out</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
                   className="absolute top-0 left-0 h-full w-1/4 rounded-full bg-gradient-to-r from-[#470277] to-[#0B87BA]"
@@ -132,7 +142,7 @@ const Footer = () => {
                 />
               </div>
             <a
-              href="#"
+              href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi"
               className="mt-4 inline-flex items-center gap-3 
     bg-white text-black 
     px-3 py-1 

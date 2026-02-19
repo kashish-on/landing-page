@@ -93,13 +93,13 @@ const HowItWorksSection = () => {
             transition={{ duration: 0.6 }}
             className="flex-1 w-full"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            <h2 className="font-sora text-3xl md:text-4xl font-bold mb-2">
               Boost Prospecting with a
             </h2>
-            <h2 className="text-3xl md:text-4xl font-bold violet-gradient-text mb-6">
+            <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#72339F]/80 mb-6">
               Chrome Extension
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="font-sora text-muted-foreground mb-8">
               ObserveNow.AI runs as a lightweight Chrome Extension that supercharges prospecting directly on Linkedin and other sites websites in real time.
             </p>
 
@@ -143,8 +143,10 @@ const HowItWorksSection = () => {
               size="lg" 
               className="btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet"
             >
+              <a href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi" className="flex items-center gap-2">
               ADD TO CHROME – IT’S FREE!
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </motion.div>
         </div>
