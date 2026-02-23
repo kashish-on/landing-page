@@ -15,7 +15,7 @@ const logos = [
 
 const LogoSection = () => {
   return (
-    <section className="relative z-20 -mt-10">
+    <section className="relative z-20 -mt-10 w-full">
       <div className="w-full">
         <div className="mx-auto max-w-[1400px] bg-white/70 backdrop-blur-md py-7 px-8">
 

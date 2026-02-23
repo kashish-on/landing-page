@@ -105,11 +105,11 @@ const Footer = () => {
                 />
               </div>
             <ul className="mt-4 space-y-3 text-black/60 text-sm">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Free Trial</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="/"className="hover:text-black transition-colors">Home</a></li>
+              <li><a href="/about" className="hover:text-black transition-colors">About us</a></li>
+              <li><a href="https://dashboard.observenow.ai/signup" className="hover:text-black transition-colors">Free Trial</a></li>
+              <li><a href="/contact" className="hover:text-black transition-colors">Contact Us</a></li>
+              {/* <li><a href="/privacy">Privacy Policy</a></li> */}
             </ul>
           </div>
 
@@ -124,10 +124,11 @@ const Footer = () => {
                 />
               </div>
             <ul className="mt-4 space-y-3 text-black/60 text-sm">
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">How It Work</a></li>
-              <li><a href="#">Chrome Extension</a></li>
+              <li><a href="#" className="hover:text-black transition-colors">FAQs</a></li>
+              <li><a href="#" className="hover:text-black transition-colors">Support</a></li>
+              <li><a href="#" className="hover:text-black transition-colors">How It Work</a></li>
+              <li><a href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi" className="hover:text-black transition-colors">Chrome Extension</a></li>
+              {/* <li><a href="/privacy" className="hover:text-black transition-colors">Privacy Policy</a></li> */}
             </ul>
           </div>
 
@@ -167,9 +168,38 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="text-center text-black/50 text-sm mt-16">
-          Copyright © 2026 DataGen – An ObserveNow Product
+      <div className="mt-16 pt-6 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
+         {/* Left Links */}
+  <div className="flex flex-wrap items-center gap-3 mt-16">
+    <a href="/privacy" className="hover:text-black transition-colors">
+      Privacy Policy
+    </a>
+    <span>|</span>
+    <a href="/terms" className="hover:text-black transition-colors">
+      Terms
+    </a>
+    <span>|</span>
+    <a href="/gdpr" className="hover:text-black transition-colors">
+      GDPR
+    </a>
+    <span>|</span>
+    <a href="/dpdp" className="hover:text-black transition-colors">
+      DPDP Act
+    </a>
+    <span>|</span>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-PCdgL-WlIfkLCFl9A6Dut6FMJykz_u4eVYuC45ISlCfwYw/viewform?usp=publish-editor" className="hover:text-black transition-colors">
+      Data Removal
+    </a> 
+    <span>|</span>
+    <a href="/cookie" className="hover:text-black transition-colors">
+      Cookie Policy
+    </a>
+  </div>
+
+        <div className="text-center md:text-right mt-16">
+          © 2026 Adverbo Productions LLP. All Rights Reserved.
         </div>
+      </div>
       </div>
     </footer>
   );
