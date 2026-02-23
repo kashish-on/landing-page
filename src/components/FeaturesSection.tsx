@@ -9,7 +9,7 @@ import FeatureImg4 from "@/assets/img4.gif";
 
 const features = [
   {
-    badge: "Chrome Extension",
+    badge: "Datasets",
     title: "Unique Add-On",
     image: FeatureImg1,
     points: [
@@ -20,7 +20,7 @@ const features = [
     imagePosition: "left",
   },
   {
-    badge: "Chrome Extension",
+    badge: "Lead Recommendation",
     title: "AI Lead Recommendations",
     image: FeatureImg2,
     points: [
@@ -31,7 +31,7 @@ const features = [
     imagePosition: "right",
   },
   {
-    badge: "Chrome Extension",
+    badge: "Verified Contacts",
     title: "Verified CXO Contacts",
     image: FeatureImg3,
     points: [
