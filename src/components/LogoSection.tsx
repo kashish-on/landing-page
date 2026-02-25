@@ -3,6 +3,7 @@ import google from "@/assets/google.png";
 import microsoft from "@/assets/microsoft.png";
 import ibm from "@/assets/ibm.png";
 import ntt from "@/assets/ntt-logo.png";
+import crayon from "@/assets/crayon.png";
 // import { Star } from "lucide-react";
 
 const logos = [
@@ -10,14 +11,14 @@ const logos = [
   { src: microsoft, alt: "Microsoft" },
   { src: ibm, alt: "IBM" },
   { src: ntt, alt: "NTT Data" },
-  { src: google, alt: "Google" },
+  { src: crayon, alt: "Crayon" },
 ];
 
 const LogoSection = () => {
   return (
     <section className="relative z-20 -mt-10 w-full">
       <div className="w-full">
-        <div className="mx-auto max-w-[1400px] bg-white/70 backdrop-blur-md py-7 px-8">
+        <div className="w-full bg-white/70 backdrop-blur-md py-7 px-8">
 
           {/* Trusted Badge */}
           <div className="absolute -top-5 left-1/2 -translate-x-1/2">
@@ -33,7 +34,7 @@ const LogoSection = () => {
                 key={index}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-8 md:h-10 object-contain opacity-80 hover:grayscale-0 hover:opacity-100 transition"
+                className="h-10 md:h-10 object-contain opacity-80 hover:grayscale-0 hover:opacity-100 transition"
               />
             ))}
           </div>

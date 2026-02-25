@@ -1,9 +1,32 @@
 import { motion } from "framer-motion";
-import logo from "@/assets/observenow_ai.png";
+import logo from "@/assets/observenow_ai_cropped.png";
 import { Linkedin, Twitter, Instagram, Youtube, Mail } from "lucide-react";
 
 import MailIcon from "@/assets/Mail icon.svg";
 import { NavLink } from "./NavLink";
+
+const socialLinks = [
+  {
+    icon: Linkedin,
+    url: "https://www.linkedin.com/company/observenow/posts/?feedView=all", 
+    label: "LinkedIn",
+  },
+  {
+    icon: Twitter,
+    url: "https://x.com/ObservenowMedia", 
+    label: "Twitter",
+  },
+  {
+    icon: Instagram,
+    url: "https://www.instagram.com/now_observe/", 
+    label: "Instagram",
+  },
+  {
+    icon: Youtube,
+    url: "https://www.youtube.com/@ObserveNowMedia", 
+    label: "YouTube",
+  },
+];
 
 const Footer = () => {
   return (
@@ -14,7 +37,7 @@ const Footer = () => {
 {/* Bottom-right soft violet glow */}
 <div className="pointer-events-none absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#470277]/10 blur-[110px]" />
 
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 pt-16 pb-6">
 
         {/* Newsletter */}
 <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-12 border-b border-black/10">
@@ -64,38 +87,38 @@ const Footer = () => {
             <img
   src={logo}
   alt="Your Brand Name"
-  className="h-28 mb-4"
+  className="h-12 mb-4"
  />
 
-            <p className="text-black/60 text-sm mb-6">
+            <p className="text-black/60 text-sm w-[320px] mb-6">
               From accurate data extraction to verified contacts, seamless
               integration, and smart filters — everything you need to find and
               connect with the right people, faster.
             </p>
-
-            <div className="flex gap-3">
-              {[Linkedin, Twitter, Instagram, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="group"
-                  
-                  // className="w-9 h-9 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition"
-                >
-                  <div className="p-[2px] rounded-full bg-gradient-to-r from-[#48B4E1] to-[#72339F]">
-        {/* Inner Circle */}
-        <div className="w-10 h-10 rounded-full bg-[#EFEFEF] flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_14px_rgba(114,51,159,0.35)]">
+  
+          <div className="flex gap-3">
+  {socialLinks.map(({ icon: Icon, url, label }, i) => (
+    <a
+      key={i}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="group"
+    >
+      <div className="p-[2px] rounded-full bg-gradient-to-r from-[#48B4E1] to-[#72339F]">
+        <div className="w-8 h-8 rounded-full bg-[#EFEFEF] flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_14px_rgba(114,51,159,0.35)]">
           <Icon className="w-4 h-4 text-black" />
         </div>
       </div>
-                  {/* <Icon className="w-4 h-4" /> */}
-                </a>
-              ))}
-            </div>
+    </a>
+  ))}
+</div>
+
           </div>
 
           {/* Useful Links */}
-          <div>
+          <div className="ml-24">
             <h4 className="font-sora font-semibold text-black text-lg leading-none">Useful Links</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
@@ -114,7 +137,7 @@ const Footer = () => {
           </div>
 
           {/* Help & Support */}
-          <div className="inline-flex flex-col items-start">
+          <div className="inline-flex flex-col ml-4 items-start">
             <h4 className="font-sora font-semibold text-black text-lg leading-none">Help & Support</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
@@ -124,9 +147,9 @@ const Footer = () => {
                 />
               </div>
             <ul className="mt-4 space-y-3 text-black/60 text-sm">
-              <li><a href="#" className="hover:text-black transition-colors">FAQs</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">Support</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">How It Work</a></li>
+              <li><a href="/pricing#faqs" className="hover:text-black transition-colors">FAQs</a></li>
+              <li><a href="/contact" className="hover:text-black transition-colors">Support</a></li>
+              <li><a href="/#howitworks" className="hover:text-black transition-colors">How It Work</a></li>
               <li><a href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi" className="hover:text-black transition-colors">Chrome Extension</a></li>
               {/* <li><a href="/privacy" className="hover:text-black transition-colors">Privacy Policy</a></li> */}
             </ul>
@@ -168,9 +191,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-      <div className="mt-16 pt-6 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
+      <div className="mt-8 pt-4 pb-6 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
          {/* Left Links */}
-  <div className="flex flex-wrap items-center gap-3 mt-16">
+  <div className="flex flex-wrap items-center gap-3">
     <a href="/privacy" className="hover:text-black transition-colors">
       Privacy Policy
     </a>
@@ -196,7 +219,7 @@ const Footer = () => {
     </a>
   </div>
 
-        <div className="text-center md:text-right mt-16">
+        <div className="text-center md:text-right mt-4 md:mt-5">
           © 2026 Adverbo Productions LLP. All Rights Reserved.
         </div>
       </div>

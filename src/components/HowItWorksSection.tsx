@@ -10,7 +10,7 @@ import StepLine from "@/assets/step-line.png";
 
 import PuzzleDeco from "@/assets/puzzle.png";
 
-import FeatureLeftImg from "@/assets/work-seamlessly1.png";
+import FeatureLeftImg from "@/assets/howitworks.png";
 
 const steps = [
   {
@@ -34,7 +34,7 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="pt-16 pb-10 bg-[#470277]/5 relative overflow-hidden">
+    <section id="howitworks" className="pt-16 pb-10 bg-[#470277]/5 relative overflow-hidden">
        <div className="container mx-auto px-4">
         {/* Badge */}
         <motion.div 

@@ -114,7 +114,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex items-center justify-center gap-3 mb-16 text-[#470277]"
         >
-          <div className="w-6 h-6 rounded flex items-center justify-center text-white text-xs font-bold bg-[#470277]">G</div>
+          {/* <div className="w-6 h-6 rounded flex items-center justify-center text-white text-xs font-bold bg-[#470277]">G</div> */}
           <div className="flex gap-0.5">
             {[1, 2, 3, 4].map((i) => (
               <Star key={i} className="w-4 h-4 fill-[#470277] text-[#470277]" />
@@ -149,19 +149,11 @@ const HeroSection = () => {
               <motion.div
                 key={index}
                 className="flex-shrink-0 w-72 bg-card rounded-2xl p-4 shadow-card border border-border hover:shadow-card-lg transition-shadow"
-                style={{ transform: `rotate(${(index % 3 - 1) * 3}deg)` }}
+                // style={{ transform: `rotate(${(index % 3 - 1) * 3}deg)` }}
                 whileHover={{ scale: 1.05, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="relative mb-3">
-                  {/* <div className="w-full h-40 bg-gradient-to-br from-violet-100 to-blue-100 rounded-xl overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-violet-200/50 to-transparent flex items-center justify-center">
-                      <div className="w-20 h-20 bg-gradient-to-br from-violet-300 to-violet-400 rounded-full" />
-                    </div>
-                  </div> */}
-                  {/* <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">H</span>
-                  </div> */}
                   <div className="w-full h-40 rounded-xl overflow-hidden bg-violet-100">
   <img
     src={card.img}

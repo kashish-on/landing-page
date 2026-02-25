@@ -1,150 +1,226 @@
-import { Megaphone, Heart, BarChart3, ClipboardCheck, Mic, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import AnalyticsSection from "@/components/AnalyticsSection";
+import CountUp from "@/components/CountUp";
+
+// import CountUp from "react-countup";
 
 import IconUsers from "@/assets/user.svg";
 
-import DataToRevenueStack from "@/assets/data-to-revenue.png";
+// FOUNDATION
+import FoundationIcon from "@/assets/foundation.png";
+import FoundationShape from "@/assets/shape1.png";
+import FoundationLine from "@/assets/line.png";
+import Fline from "@/assets/line1.png";
 
+// RECOGNITION
+import RecognitionIcon from "@/assets/recognition.png";
+import RecognitionShape from "@/assets/shape2.png";
+import RecognitionLine from "@/assets/line.png";
+import Rline from "@/assets/line2.png";
 
-import PolygonWhite from "@/assets/polygon-white.svg";
+// COMMUNITY
+import CommunityIcon from "@/assets/community.png";
+import CommunityShape from "@/assets/shape3.png";
+import CommunityLine from "@/assets/line.png";
+import Cline from "@/assets/line3.png";
 
-import arrow1 from "@/assets/arrow-1.svg";
-import arrow2 from "@/assets/arrow-2.svg";
-import arrow3 from "@/assets/arrow-3.svg";
-import arrow4 from "@/assets/arrow-4.svg";
-import arrow5 from "@/assets/arrow-5.svg";
-import Shadow from "@/assets/shadow.svg";
+// REPUTATION
+import ReputationIcon from "@/assets/reputation.png";
+import ReputationShape from "@/assets/shape4.png";
+import ReputationLine from "@/assets/line.png";
+import Repline from "@/assets/line4.png";
 
-import IconLead from "@/assets/icon-lead.svg";
-import IconHeart from "@/assets/icon-heart.svg";
-import IconChart from "@/assets/icon-chart.svg";
-import IconClipboard from "@/assets/icon-clipboard.svg";
-import IconMic from "@/assets/icon-mic.svg";
+// LEAD INTELLIGENCE
+import LeadIcon from "@/assets/lead.png";
+import LeadShape from "@/assets/shape5.png";
+import LeadLine from "@/assets/line.png";
+import Lline from "@/assets/line5.png";
+
+import AnalyticsSection from "./AnalyticsSection";
 
 const steps = [
-  { icon: IconMic, label: "Lead Intelligence", arrow: arrow1, shadow: Shadow },
-  { icon: IconHeart, label: "Smart Recommendations", arrow: arrow2, shadow: Shadow },
-  { icon: IconChart, label: "Precision Targeting", arrow: arrow3, shadow: Shadow },
-  { icon: IconClipboard, label: "Data Enrichment", arrow: arrow4, shadow: Shadow },
-  { icon: IconLead, label: "Workflow Integration", arrow: arrow5, shadow: Shadow },
+  {
+    icon: FoundationIcon,
+    shape: FoundationShape,
+    line: FoundationLine,
+    bar:Fline,
+    lineoffset: "-ml-120 -mt-2",
+    textOffset: "-ml-6",
+    textTop: "-mt-2",
+    title: "Foundation",
+    heading: "Data Infrastructure & Quality Base",
+    desc: "Verified data infrastructure for accurate targeting.",
+    barColor: "bg-[#0B87BA]",
+  },
+  {
+    icon: RecognitionIcon,
+    shape: RecognitionShape,
+    line: RecognitionLine,
+    bar: Rline,
+    lineoffset: "-ml-112 -mt-3",
+    textOffset: "-ml-10",
+    textTop: "-mt-6",
+    title: "Recognition",
+    heading: "AI-Driven Contact + Account Intelligence",
+    desc: "Enriched contact and account insights powered by AI.",
+    barColor: "bg-[#0B87BA]",
+  },
+  {
+    icon: CommunityIcon,
+    shape: CommunityShape,
+    line: CommunityLine,
+    bar: Cline,
+    lineoffset: "-ml-120 -mt-3",
+    textOffset: "-ml-14",
+    textTop: "-mt-10",
+    title: "Community",
+    heading: "Data + Events Network + Client Ecosystem",
+    desc: "Events and data combined for stronger outreach.",
+    barColor: "bg-[#1E5FA8]",
+  },
+  {
+    icon: ReputationIcon,
+    shape: ReputationShape,
+    line: ReputationLine,
+    bar: Repline,
+    lineoffset: "-ml-110 -mt-3",
+    textOffset: "-ml-18",
+    textTop: "-mt-12",
+    title: "Reputation",
+    heading: "India + APAC Strong, Global Expansion",
+    desc: "Regional strength with scalable global expansion.",
+    barColor: "bg-[#2D469C]",
+  },
+  {
+    icon: LeadIcon,
+    shape: LeadShape,
+    line: LeadLine,
+    bar: Lline,
+    lineoffset: "-ml-120 -mt-3",
+    textOffset: "-ml-22",
+    textTop: "-mt-16",
+    title: "Lead Intelligence",
+    heading: "Event-Driven Market Intel + Conversion Growth",
+    desc: "Actionable insights that accelerate conversions.",
+    barColor: "bg-[#4A1575]",
+  },
 ];
 
 const stats = [
-  { icon: IconUsers, value: "40K+", label: "Business Leads" },
-  { icon: IconUsers, value: "80K+", label: "CXO Data Sets" },
-  { icon: IconUsers, value: "220K+", label: "CXO Leaders Data Points" },
-  { icon: IconUsers, value: "300K+", label: "B2B Organisations" },
+  { icon: IconUsers, value: "50K+", label: "Business Leads" },
+  { icon: IconUsers, value: "34M+", label: "CXO Data Sets" },
+  { icon: IconUsers, value: "340M+", label: "CXO Leaders Data Points" },
+  { icon: IconUsers, value: "800K+", label: "B2B Organisations" },
 ];
 
 const DataToRevenueSection = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="mx-auto px-4 max-w-[1400px]">
-        {/* Badge */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center mb-8"
-        >
-          <span className="section-badge border border-[#470277]">Data-driven Strategy</span>
-        </motion.div>
+    <section className="py-20 px-4 ml-24 bg-background">
+      <div className="max-w-5xl mx-auto">
 
-        {/* Heading */}
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
-        >
-          From Data to <span className="text-[#72339F]/80 font-sora">Revenue</span>
-        </motion.h2>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="font-sora text-center text-muted-foreground max-w-2xl mx-auto mb-16"
-        >
-          A structured 5-stage approach that transforms raw lead data into targeted outreach, smarter decisions, and sales growth.
-        </motion.p>
+                 {/* Badge */}
+         <div className="flex justify-center mb-6">
+           <span className="section-badge border border-[#470277]">
+             Data-driven Strategy
+           </span>
+         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
-          {/* 3D Stacked Discs Visualization */}
-          {/* 3D Stacked Discs Visualization */}
-          
-          <motion.div
-  initial={{ opacity: 0, x: -40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  className="relative flex-1 flex justify-center lg:justify-end pl-12 overflow-visible"
->
-  <motion.img
-    src={DataToRevenueStack}
-    alt="Data to Revenue Flow"
-    className="max-w-[900px] w-full h-auto translate-x-2 -translate-y-6"
-    initial={{ opacity: 0, y: 30, x: -20 }}
-  whileInView={{ opacity: 1, y: -20, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  />
-</motion.div>
+         {/* Heading */}
+         <h2 className="font-sora text-4xl md:text-5xl font-bold text-center mb-3">
+           From Data to <span className="text-[#72339F]/80">Revenue</span>
+         </h2>
 
+         <p className="font-sora text-center text-muted-foreground max-w-2xl mx-auto mb-16">
+           A structured 5-stage approach that transforms raw lead data into targeted outreach, smarter decisions, and sales growth.
+         </p>
 
-          {/* Steps List */}
-          <div className="flex-1 space-y-6">
-            {steps.map((step, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, x: 30 }}
+         {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"> */}
+
+          {/* LEFT VISUAL STACK */}
+           <div className="flex flex-col gap-10">
+             {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-2 group"
+                className="relative flex items-center gap-4"
               >
-                {/* White Polygon Background */}
-      <div className="relative w-[88px] h-[88px] flex items-center justify-center">
-        <img
-          src={PolygonWhite}
-          alt="Polygon"
-          className="absolute inset-0 w-full h-full"
-        />
-        <img
-          src={step.icon}
-          alt={step.label}
-          className="relative z-10 w-7 h-7"
-        />
-         </div>
-                
-                <div className="relative w-16 h-16 -mr-2">
-  {/* Shadow behind */}
-  <img
-    src={step.shadow}
-    alt=""
-    className="absolute -left-2 top-2 w-16 h-16 opacity-80"
-  />
+                {/* White Circle */}
+                {/* <div className="relative w-16 h-16 flex items-center justify-center"> */}
+                  {/* <img src={step.shape} alt="" className="absolute inset-0 w-full h-full" /> */}
+                  {/* <img src={step.icon} alt={step.title} className="relative w-16 h-16 ml-8" />
+                </div> */}
 
-  {/* Main colored arrow */}
+                {/* Colored Step Shape */}
+                {/* <img src={step.shape} alt="" className="h-14 w-auto" /> */}
+                {/* <div className="relative">
+  <img src={step.shape} alt="" className="h-14 w-auto" /> */}
+
+  {/* White text overlay */}
+  {/* <span className="absolute inset-0 flex items-center justify-center 
+                   text-white font-sora text-sm font-semibold tracking-wide">
+    {step.title}
+  </span>
+</div> */}
+
+{/* Step Shape + Overlapping Icon */}
+<div className="relative flex items-center">
+  {/* Colored Step Shape */}
+  <div className="relative">
+    <img src={step.shape} alt="" className="h-14 w-auto" />
+
+    {/* White text on shape */}
+    <span className="absolute inset-0 flex items-center justify-center 
+                     text-white font-sora text-sm font-semibold tracking-wide">
+      {step.title}
+    </span>
+  </div>
+
+  {/* White Circle Icon (overlapping) */}
   <img
-    src={step.arrow}
-    alt={step.label}
-    className="absolute left-0 top-0 w-16 h-16"
+    src={step.icon}
+    alt={step.title}
+    className="absolute -left-8 w-16 h-16 rounded-full bg-white shadow-md p-3"
   />
 </div>
-                <span className="font-semibold text-foreground text-[15px]">{step.label}</span>
+
+
+                {/* Connector Line */}
+                <img src={step.line} alt="" className="h-1 w-32 -ml-4" />
+              {/* </motion.div>
+            ))}
+          </div> */}
+
+                {/* Right text */}
+                <div className="relative pl-10">
+                   {/* Colored vertical bar */}
+  <img
+    src={step.bar}
+    alt=""
+    className={`absolute left-0 top-1 w-[6px] h-[56px] ${step.lineoffset}`}
+  />
+                  <h3 className="font-bold text-foreground text-lg leading-tight">
+                    {step.heading}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mt-1 leading-relaxed max-w-sm">
+                    {step.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
+              
+            {/* );
+          })} */}
+        {/* </div> */}
+       
+                 <AnalyticsSection />
 
-        <AnalyticsSection />
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
+           {/* Stats Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+             {stats.map((stat, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -166,15 +242,20 @@ const DataToRevenueSection = () => {
   />
 </div>
 
-              <div className="font-sora text-3xl font-bold text-foreground mb-1">{stat.value}</div>
+              {/* <div className="font-sora text-3xl font-bold text-foreground mb-1">{stat.value}</div> */}
+               {/* Animated Number */}
+      <div className="font-sora text-3xl font-bold text-foreground mb-1">
+        <CountUp value={stat.value} />
+      </div>
+
               <div className="font-sora text-sm text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
 };
 
 export default DataToRevenueSection;
-

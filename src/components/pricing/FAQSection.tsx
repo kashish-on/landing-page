@@ -32,7 +32,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="pt-8 pb-16 bg-background">
+    <section id="faqs" className="pt-8 pb-16 bg-background">
       <div className="container mx-auto px-4 max-w-6xl text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ const FAQSection = () => {
               className="w-full rounded-2xl border-none bg-[#72339F]/10 px-6"
             >
               {/* <AccordionTrigger className="text-base font-semibold text-foreground hover:no-underline"> */}
-              <AccordionTrigger className="group flex w-full items-center justify-between gap-4 p-6 text-left hover:no-underline [&>svg]:hidden">
+              <AccordionTrigger className="group flex w-full items-center justify-between gap-4 px-6 py-4 text-left hover:no-underline [&>svg]:hidden">
                 {/* {faq.question} */}
                 {/* Question text */}
   <span className="text-base font-semibold text-foreground text-left">
@@ -113,7 +113,7 @@ const FAQSection = () => {
     />
   </span>
               </AccordionTrigger>
-              <AccordionContent className="mt-3 pl-0 pr-12 text-sm text-muted-foreground">
+              <AccordionContent className="-mt-1 ml-7 pl-0 pr-12 text-sm text-muted-foreground">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

@@ -49,26 +49,7 @@ const HeroSection = () => {
             Privacy <span className="text-[#72339F]/80 font-sora">Policy</span>
           </h1>
         </motion.div>
-
-        {/* <p className="font-sora text-sm text-muted-foreground text-base md:text-lg mb-8 max-w-3xl mx-auto">
-          ObserveNow.ai helps B2B teams find high-intent prospects, access verified contacts, and act on
-          real-time insights to drive faster, more predictable revenue.
-        </p> */}
-
-         {/* CTA */}
-        {/* <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-2"
-        >
-          <Button size="lg" className="btn-gradient button text-primary-foreground text-base group shadow-violet">
-            <a href="https://dashboard.observenow.ai/signup" className="flex items-center gap-2">
-            START YOUR FREE TRIAL
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Button>
-        </motion.div> */}
+ 
       </div>
     </section>
   );

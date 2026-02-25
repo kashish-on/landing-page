@@ -50,7 +50,7 @@ const Header = () => {
 
             <NavLink
               to="/contact"
-              className="text-primary font-semibold"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               Contact Sales
             </NavLink>
