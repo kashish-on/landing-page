@@ -58,8 +58,28 @@ const IntegrationsSection = () => {
     <section className="py-20 bg-[#470277]/5 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="relative">
+
+          {/* Mobile Grid Layout */}
+<div className="grid grid-cols-3 gap-4 md:hidden mb-12">
+  {integrations.map((integration, index) => (
+    <div
+      key={index}
+      className="bg-card rounded-2xl shadow-card border border-border flex items-center justify-center h-[90px]"
+    >
+      <img
+        src={integration.logo}
+        alt={integration.name}
+        className="w-10 h-10 object-contain"
+        style={{
+          transform: `scale(${integration.scale ?? 1})`,
+        }}
+      />
+    </div>
+  ))}
+</div>
+
           {/* Floating Integration Cards */}
-          <div className="relative min-h-[420px] h-auto mb-8">
+          <div className="relative min-h-[420px] h-auto mb-8 hidden md:block">
             {integrations.map((integration, index) => {
               const pos = positions[index % positions.length];
 
@@ -105,7 +125,7 @@ const IntegrationsSection = () => {
             viewport={{ once: true }}
             className="flex justify-center mb-1"
           >
-            <span className="section-badge -mt-10 mb-3 border border-[#470277]">Our Toolset</span>
+            <span className="section-badge mt-10 sm:-mt-10 mb-3 border border-[#470277] inline-block text-xs sm:text-sm md:text-base">Our Toolset</span>
           </motion.div>
 
           {/* Heading */}
@@ -114,7 +134,7 @@ const IntegrationsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-sora text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4"
+            className="font-sora text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4"
           >
             Technologies Behind Our
             <br />
@@ -126,7 +146,7 @@ const IntegrationsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="font-sora text-center text-sm text-muted-foreground max-w-2xl mx-auto mb-8"
+            className="font-sora text-center text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8"
           >
             Unlike generic data tools, DataGen is powered by advanced tech that ensures accuracy, freshness, and scalability. Experience the difference with our verified lead engines and updated CXO databases.
           </motion.p>
