@@ -6,7 +6,7 @@ import GridPattern from "@/assets/white-grid.svg";
 
 const HeroSection = () => {
   return (
-    <section className="relative gradient-hero-bg bg-[#470277]/5 overflow-hidden pt-16 pb-6 md:pt-24 md:pb-8 text-center">
+    <section id="contact" className="relative gradient-hero-bg bg-[#470277]/5 overflow-hidden pt-16 pb-6 md:pt-24 md:pb-8 text-center">
        {/* Center purple glow */}
 <div className="pointer-events-none absolute inset-0 flex items-center justify-center translate-y-48">
   <div

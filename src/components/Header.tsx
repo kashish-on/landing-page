@@ -39,21 +39,21 @@ const Header = () => {
             </NavLink>
 
             <NavLink
-              to="/about"
+              to="/about#about"
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               About
             </NavLink>
 
             <NavLink
-              to="/pricing"
+              to="/pricing#pricing"
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               Pricing
             </NavLink>
 
             <NavLink
-              to="/contact"
+              to="/contact#contact"
               className="text-foreground/80 hover:text-foreground font-medium transition-colors"
             >
               Contact Sales
