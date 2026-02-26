@@ -63,21 +63,21 @@ const ServicesSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto mb-8"
         >
-          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 whitespace-nowrap">
+          <h1 className="font-sora text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
             Examining <span className="text-[#72339F]/80">Essential Services</span>
           </h1>
         </motion.div>
 
-        <p className="font-sora text-muted-foreground text-base max-w-3xl mx-auto mb-14">
+        <p className="font-sora text-muted-foreground text-base sm:text-base md:text-lg max-w-3xl mx-auto mb-14">
           CRM management is comprehensive contact management, allowing businesses to centralize
           and organize customer information for easy access.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service) => (
             <div
               key={service.title}
-              className="font-dm rounded-xl border border-border bg-card p-8 text-center hover:shadow-lg transition-shadow"
+              className="font-dm rounded-xl border border-border bg-card p-6 sm:p-8 text-center hover:shadow-lg transition-shadow"
             >
               <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-brand-light-violet">
                 <img
@@ -87,8 +87,8 @@ const ServicesSection = () => {
           />
                 {/* <service.icon className="h-7 w-7 text-brand-violet" /> */}
               </div>
-              <h3 className="font-dm font-bold text-foreground mb-2">{service.title}</h3>
-              <p className="font-dm text-sm text-muted-foreground">{service.description}</p>
+              <h3 className="font-dm font-bold text-foreground mb-2 text-base sm:text-lg">{service.title}</h3>
+              <p className="font-dm text-xs sm:text-sm text-muted-foreground">{service.description}</p>
             </div>
           ))}
         </div>

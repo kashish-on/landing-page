@@ -114,7 +114,7 @@ const stats = [
 
 const DataToRevenueSection = () => {
   return (
-    <section className="py-20 px-4 ml-24 bg-background">
+    <section className="py-20 px-4 sm:px-6 bg-background">
       <div className="max-w-5xl mx-auto">
 
                  {/* Badge */}
@@ -144,7 +144,7 @@ const DataToRevenueSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="relative flex items-center gap-4"
+                className="relative flex flex-col sm:flex-row items-start gap-4"
               >
                 {/* White Circle */}
                 {/* <div className="relative w-16 h-16 flex items-center justify-center"> */}
@@ -168,7 +168,7 @@ const DataToRevenueSection = () => {
 <div className="relative flex items-center">
   {/* Colored Step Shape */}
   <div className="relative">
-    <img src={step.shape} alt="" className="h-14 w-auto" />
+    <img src={step.shape} alt="" className="h-10 sm:h-14 w-auto" />
 
     {/* White text on shape */}
     <span className="absolute inset-0 flex items-center justify-center 
@@ -181,29 +181,30 @@ const DataToRevenueSection = () => {
   <img
     src={step.icon}
     alt={step.title}
-    className="absolute -left-8 w-16 h-16 rounded-full bg-white shadow-md p-3"
+    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white shadow-md p-2 sm:p-3
+               sm:absolute sm:-left-8"
   />
 </div>
 
 
                 {/* Connector Line */}
-                <img src={step.line} alt="" className="h-1 w-32 -ml-4" />
+                <img src={step.line} alt="" className="hidden sm:block h-1 w-32 -ml-4" />
               {/* </motion.div>
             ))}
           </div> */}
 
                 {/* Right text */}
-                <div className="relative pl-10">
+                <div className="relative sm:pl-10 pl-0">
                    {/* Colored vertical bar */}
   <img
     src={step.bar}
     alt=""
-    className={`absolute left-0 top-1 w-[6px] h-[56px] ${step.lineoffset}`}
+    className={`hidden sm:block absolute left-0 top-1 w-[6px] h-[56px] ${step.lineoffset}`}
   />
-                  <h3 className="font-bold text-foreground text-lg leading-tight">
+                  <h3 className="font-bold text-foreground text-lg sm:text-xl leading-tight text-center sm:text-left">
                     {step.heading}
                   </h3>
-                  <p className="text-muted-foreground text-sm mt-1 leading-relaxed max-w-sm">
+                  <p className="text-muted-foreground text-sm sm:text-base mt-1 leading-relaxed max-w-full sm:max-w-sm text-center sm:text-left">
                     {step.desc}
                   </p>
                 </div>

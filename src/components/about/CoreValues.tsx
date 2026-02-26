@@ -59,7 +59,7 @@ const CoreValues = () => {
           Guiding how we build AI-powered intelligence that helps teams connect faster, sell smarter, and grow with confidence.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-16">
           {values.map((value) => (
             <div key={value.title} className="flex flex-col items-center">
               {/* Circle with icon and label */}
@@ -67,16 +67,16 @@ const CoreValues = () => {
   <img
     src={value.svg}
     alt={value.title}
-    className="w-[220px]"
+    className="w-32 sm:w-[220px]"
   />
 </div>
  
             {/* Text aligned beside the line */}
-  <div className="mt-[-110px] ml-[70px] text-left max-w-[220px]">
-    <h3 className="text-[12px]font-semibold text-foreground mb-1">
+  <div className="mt-0 sm:mt-[-110px] ml-0 sm:ml-[70px] text-left max-w-[220px]">
+    <h3 className="text-sm sm:text-[12px] font-semibold text-foreground mb-1">
       {value.title}
     </h3>
-    <p className="text-[10px] text-muted-foreground text-justify leading-[1.6]">
+    <p className="text-xs sm:text-[10px] text-muted-foreground text-justify leading-[1.6]">
       {value.description}
     </p>
   </div>

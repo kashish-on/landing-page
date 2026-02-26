@@ -32,17 +32,17 @@ const Footer = () => {
   return (
     <footer className="relative bg-white overflow-hidden">
       {/* Top-left soft violet glow */}
-<div className="pointer-events-none absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#470277]/10 blur-[110px]" />
+<div className="pointer-events-none hidden sm:block absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#470277]/10 blur-[110px]" />
 
 {/* Bottom-right soft violet glow */}
-<div className="pointer-events-none absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#470277]/10 blur-[110px]" />
+<div className="pointer-events-none hidden sm:block absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-[#470277]/10 blur-[110px]" />
 
-      <div className="container mx-auto px-6 pt-16 pb-6">
+      <div className="container mx-auto px-4 sm:px-6 pt-16 pb-6">
 
         {/* Newsletter */}
 <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-12 border-b border-black/10">
   <div>
-    <h3 className="font-sora text-3xl font-bold text-black mb-2">
+    <h3 className="font-sora text-2xl sm:text-3xl font-bold text-black mb-2">
       Subscribe our Newsletter
     </h3>
     <p className="text-black/60">
@@ -50,9 +50,9 @@ const Footer = () => {
     </p>
   </div>
 
-  <div className="flex items-center gap-4 w-full max-w-xl">
+  <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-xl">
     {/* Email Input */}
-    <div className="flex items-center gap-3 bg-white rounded-full px-6 py-4 shadow w-full">
+    <div className="flex items-center gap-3 bg-white rounded-full px-4 py-3 sm:px-6 sm:py-4 shadow w-full">
       {/* <Mail className="w-5 h-5 text-indigo-600" /> */}
       <img
       src={MailIcon}
@@ -80,7 +80,7 @@ const Footer = () => {
 
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-12">
 
           {/* Brand */}
           <div>
@@ -90,7 +90,7 @@ const Footer = () => {
   className="h-12 mb-4"
  />
 
-            <p className="text-black/60 text-sm w-[320px] mb-6">
+            <p className="text-black/60 text-sm w-full md:w-[320px] mb-6">
               From accurate data extraction to verified contacts, seamless
               integration, and smart filters — everything you need to find and
               connect with the right people, faster.
@@ -118,8 +118,8 @@ const Footer = () => {
           </div>
 
           {/* Useful Links */}
-          <div className="ml-24">
-            <h4 className="font-sora font-semibold text-black text-lg leading-none">Useful Links</h4>
+          <div className="md:ml-24">
+            <h4 className="font-sora font-semibold text-black text-base sm:text-lg leading-none">Useful Links</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
                   className="absolute top-0 left-0 h-full w-1/4 rounded-full bg-gradient-to-r from-[#470277] to-[#0B87BA]"
@@ -137,8 +137,8 @@ const Footer = () => {
           </div>
 
           {/* Help & Support */}
-          <div className="inline-flex flex-col ml-4 items-start">
-            <h4 className="font-sora font-semibold text-black text-lg leading-none">Help & Support</h4>
+          <div className="inline-flex flex-col md:ml-4 items-start">
+            <h4 className="font-sora font-semibold text-black text-base sm:text-lg leading-none">Help & Support</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
                   className="absolute top-0 left-0 h-full w-1/4 rounded-full bg-gradient-to-r from-[#470277] to-[#0B87BA]"
@@ -157,7 +157,7 @@ const Footer = () => {
 
           {/* CTA */}
           <div>
-            <h4 className="font-sora font-semibold text-black text-lg leading-none">Lets Try out</h4>
+            <h4 className="font-sora font-semibold text-black text-base sm:text-lg leading-none">Lets Try out</h4>
             <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full">
                 <motion.div
                   className="absolute top-0 left-0 h-full w-1/4 rounded-full bg-gradient-to-r from-[#470277] to-[#0B87BA]"
@@ -193,7 +193,7 @@ const Footer = () => {
         {/* Bottom */}
       <div className="mt-8 pt-4 pb-6 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
          {/* Left Links */}
-  <div className="flex flex-wrap items-center gap-3">
+  <div className="flex flex-wrap items-center gap-2 text-xs">
     <a href="/privacy" className="hover:text-black transition-colors">
       Privacy Policy
     </a>

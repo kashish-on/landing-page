@@ -60,7 +60,7 @@ const PlatformOverview = () => {
           </h1>
         </motion.div>
 
-        <p className="font-sora text-sm text-muted-foreground text-base max-w-2xl mx-auto mb-12">
+        <p className="font-sora text-xs sm:text-sm text-muted-foreground text-base max-w-2xl mx-auto mb-12">
           ObserveNow.AI by ObserveNow's AI-powered B2B lead enrichment platform designed to transform raw
           LinkedIn data into verified, actionable contact intelligence. With DataGen, businesses can instantly
           enrich profiles with real mobile numbers, work emails, personal emails, job roles, and firmographic
@@ -81,7 +81,7 @@ const PlatformOverview = () => {
       <div
         key={feature.title}
         className={`
-          font-dm text-center items-center rounded-xl border border-[#470277]/20 bg-card p-6 min-h-[300px] flex flex-col items-start justify-start text-left
+          font-dm text-center items-center rounded-xl border border-[#470277]/20 bg-card p-4 sm:p-6 min-h-auto sm:min-h-[300px] w-full max-w-xs sm:max-w-none flex flex-col items-start justify-start text-left
           transition-all duration-300
           ${index % 2 === 1 ? "lg:translate-y-10" : "lg:-translate-y-4"}
           ${shadowMap[index]}
@@ -96,11 +96,11 @@ const PlatformOverview = () => {
           />
         </div>
 
-        <h3 className="font-semibold items-center justify-center text-foreground mb-2">
+        <h3 className="font-semibold items-center justify-center text-foreground mb-2 text-base sm:text-lg">
           {feature.title}
         </h3>
 
-        <p className="text-sm leading-relaxed text-muted-foreground max-w-[240px]">
+        <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground max-w-[240px]">
           {feature.description}
         </p>
       </div>

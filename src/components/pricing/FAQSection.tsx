@@ -33,14 +33,14 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section id="faqs" className="pt-8 pb-16 bg-background">
-      <div className="container mx-auto px-4 max-w-6xl text-center">
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-3 mt-4"
         >
-          <span className="section-badge border border-[#470277]">
+          <span className="section-badge border border-[#470277] px-3 py-1">
             FAQs
           </span>
         </motion.div>
@@ -52,7 +52,7 @@ const FAQSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto mb-8"
         >
-          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight whitespace-nowrap mb-6">
+          <h1 className="font-sora text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
             Frequently Asked <span className="text-[#72339F]/80">Questions</span>
           </h1>
         </motion.div>

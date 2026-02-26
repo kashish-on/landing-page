@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Decorative gradient bar at top */}
       {/* <div className="absolute top-0 left-0 right-0 h-1 gradient-brand" /> */}
       
-      <div className="relative z-10 container mx-auto px-4 max-w-3xl">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 max-w-3xl overflow-hidden">
          <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,14 +43,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center max-w-4xl mx-auto mb-6"
+          className="text-center mx-auto mb-6"
         >
-          <h1 className="font-sora text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-center whitespace-nowrap">
+          <h1 className="font-sora text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-center">
             Unlock High-Intent <span className="text-[#72339F]/80">Growth</span>
           </h1>
         </motion.div>
 
-        <p className="font-sora text-muted-foreground text-base md:text-lg mb-6 max-w-2xl mx-auto">
+        <p className="font-sora text-muted-foreground text-base sm:text-base md:text-lg mb-6 max-w-2xl mx-auto">
           Powerful data, verified contacts, and real-time insights - packaged in plans designed for performance.
         </p>
 

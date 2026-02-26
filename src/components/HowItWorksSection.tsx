@@ -156,7 +156,7 @@ const HowItWorksSection = () => {
 <img
   src={PuzzleDeco}
   alt=""
-  className="absolute -bottom-14 right-0 w-[240px] opacity-100 "
+  className="absolute -bottom-14 right-0 w-[120px] sm:w-[240px] opacity-100"
 />
 
     

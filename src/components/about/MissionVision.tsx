@@ -106,7 +106,7 @@ const MissionVision = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
               whileHover={{ y: -6 }}
-              className={`${card.bg} ${card.col} rounded-[18px] p-6 border border-border shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${card.type === "mission" || card.type === "vision" ? "lg:col-span-2 min-h-[220px] shadow-md" : "lg:col-span-1 w-full max-w-[300px] mx-auto min-h-[220px] shadow-md"}`}
+              className={`${card.bg} ${card.col} rounded-[18px] p-6 border border-border shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${card.type === "mission" || card.type === "vision" ? "lg:col-span-2 min-h-[220px] shadow-md w-full max-w-[300px] sm:max-w-none mx-auto sm:mx-0" : "lg:col-span-1 w-full max-w-[300px] mx-auto min-h-[220px] shadow-md"}`}
             >
               {card.bgArt && (
   <img

@@ -30,7 +30,7 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-violet-50/50 pt-28 md:pt-32 pb-32">
 <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
   <div
-    className="mt-[220px] w-[1400px] h-[900px] rounded-full blur-[160px] opacity-70"
+    className="hidden md:block mt-[220px] w-[1400px] h-[900px] rounded-full blur-[160px] opacity-70"
     style={{
       background:
         "radial-gradient(circle at center, rgba(71,2,119,0.35) 0%, rgba(71,2,119,0.18) 35%, rgba(71,2,119,0.08) 55%, rgba(71,2,119,0) 70%)",
@@ -41,7 +41,7 @@ const HeroSection = () => {
 {/* Darker glow below cards */}
 <div className="pointer-events-none absolute inset-0 flex justify-center">
   <div
-    className="mt-[480px] w-[1400px] h-[700px] rounded-full blur-[140px] opacity-80"
+    className="hidden md:block mt-[480px] w-[1400px] h-[700px] rounded-full blur-[140px] opacity-80"
     style={{
       background:
         "radial-gradient(circle at center, rgba(71,2,119,0.45) 0%, rgba(71,2,119,0.28) 30%, rgba(71,2,119,0.12) 55%, rgba(71,2,119,0) 75%)",
