@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/observenow_ai_cropped.png";
-import { Linkedin, Twitter, Instagram, Youtube, Mail } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Youtube} from "lucide-react";
 
 import MailIcon from "@/assets/Mail icon.svg";
 import { NavLink } from "./NavLink";

@@ -1,4 +1,4 @@
-import { FilePlus, Sparkles, BadgeCheck, SlidersHorizontal, Globe, FileText } from "lucide-react";
+// import { FilePlus, Sparkles, BadgeCheck, SlidersHorizontal, Globe, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
 import UniqueIcon from "@/assets/unique.svg";

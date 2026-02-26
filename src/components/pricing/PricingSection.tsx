@@ -1,4 +1,4 @@
-import { ChevronRight, Zap, Clock, Chrome, LayoutGrid, Users, Sparkles, Mail, Phone, Check, GraduationCap, Gift, ArrowRight } from "lucide-react";
+import { ChevronRight, Sparkles, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 

@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const Section = ({ number, title, children }: { number: number; title: string; children: React.ReactNode }) => (
   <div className="mb-10 font-dm">
     <h2 className="font-dm text-2xl md:text-3xl font-bold text-foreground mb-4">

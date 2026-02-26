@@ -1,4 +1,4 @@
-import { Play } from "lucide-react";
+// import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 
 import FeatureImg1 from "@/assets/img1.gif";

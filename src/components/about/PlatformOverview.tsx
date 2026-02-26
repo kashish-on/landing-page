@@ -1,4 +1,4 @@
-import { CheckCircle, Linkedin, Target, MousePointerClick } from "lucide-react";
+// import { CheckCircle, Linkedin, Target, MousePointerClick } from "lucide-react";
 import { motion } from "framer-motion";
 
 import VerifiedIcon from "@/assets/verified.svg";

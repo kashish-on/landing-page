@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, FileText, Shield, TrendingUp } from "lucide-react";
+// import { Heart, FileText, Shield, TrendingUp } from "lucide-react";
 
 import CareSvg from "@/assets/care.svg";
 import ClaritySvg from "@/assets/clarity.svg";

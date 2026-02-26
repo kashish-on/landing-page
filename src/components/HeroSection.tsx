@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Phone, Star, StarHalf} from "lucide-react";
+import { ArrowRight, Mail, Phone, Star} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 

@@ -1,5 +1,5 @@
-import { ArrowRight, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+// import { ArrowRight, Star } from "lucide-react";
+// import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 import google from "@/assets/google.png";
