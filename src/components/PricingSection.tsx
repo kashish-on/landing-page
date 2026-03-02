@@ -106,7 +106,7 @@ const PricingSection = () => {
               viewport={{ once: true }}
               className={`relative bg-white rounded-3xl border transition-all overflow-hidden ${
                 plan.popular
-                  ? "border-2 border-[#470277] shadow-[0_8px_20px_rgba(71,2,119,0.35)]"
+                  ? "border-2 border-[#470277]/50 shadow-[0_8px_20px_rgba(71,2,119,0.35)]"
                   : "border border-border"
               }`}
             >
@@ -186,18 +186,6 @@ const PricingSection = () => {
                   ))}
                 </ul>
 
-                {/* BUTTON */}
-                {/* <Button
-                  className={`w-full py-6 text-base ${
-                    plan.popular
-                      ? "btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet"
-                      : "bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all"
-                  }`}
-                >
-                  <a href="https://dashboard.observenow.ai/login" className="flex items-center gap-2">
-                  Get Started <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
-                </Button> */}
 
                 <Button
   asChild

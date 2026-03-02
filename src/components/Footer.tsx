@@ -50,7 +50,7 @@ const Footer = () => {
     </p>
   </div>
 
-  <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-xl">
+  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full max-w-xl">
     {/* Email Input */}
     <div className="flex items-center gap-3 bg-white rounded-full px-4 py-3 sm:px-6 sm:py-4 shadow w-full">
       {/* <Mail className="w-5 h-5 text-indigo-600" /> */}

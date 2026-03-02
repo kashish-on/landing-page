@@ -59,25 +59,6 @@ const IntegrationsSection = () => {
       <div className="container mx-auto px-4">
         <div className="relative">
 
-          {/* Mobile Grid Layout */}
-<div className="grid grid-cols-3 gap-4 md:hidden mb-12">
-  {integrations.map((integration, index) => (
-    <div
-      key={index}
-      className="bg-card rounded-2xl shadow-card border border-border flex items-center justify-center h-[90px]"
-    >
-      <img
-        src={integration.logo}
-        alt={integration.name}
-        className="w-10 h-10 object-contain"
-        style={{
-          transform: `scale(${integration.scale ?? 1})`,
-        }}
-      />
-    </div>
-  ))}
-</div>
-
           {/* Floating Integration Cards */}
           <div className="relative min-h-[420px] h-auto mb-8 hidden md:block">
             {integrations.map((integration, index) => {
@@ -167,6 +148,24 @@ const IntegrationsSection = () => {
             </Button>
           </motion.div>
           </div>
+          {/* Mobile Grid Layout */}
+<div className="grid grid-cols-3 gap-4 md:hidden mt-12 mb-12">
+  {integrations.map((integration, index) => (
+    <div
+      key={index}
+      className="bg-card rounded-2xl shadow-card border border-border flex items-center justify-center h-[90px]"
+    >
+      <img
+        src={integration.logo}
+        alt={integration.name}
+        className="w-10 h-10 object-contain"
+        style={{
+          transform: `scale(${integration.scale ?? 1})`,
+        }}
+      />
+    </div>
+  ))}
+</div>
         </div>
       </div>
     </section>

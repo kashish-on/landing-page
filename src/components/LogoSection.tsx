@@ -19,7 +19,12 @@ const logos = [
 const LogoSection = () => {
   // const isMobile = useIsMobile();
   // duplicate logos for marquee animation
-  const duplicated = [...logos, ...logos, ...logos];
+  // duplicate logos several times to allow smooth marquee without immediate repeats
+  const duplicated = [...logos, ...logos, ...logos, ...logos];
+
+  // approximate scroll distance based on number of original logos,
+  // a larger value ensures duplicates don’t enter view before others
+  const scrollDistance = logos.length * 300; // 5 logos * 400px each including wider gap
 
   return (
     <section className="relative z-20 -mt-10 w-full">
@@ -28,24 +33,24 @@ const LogoSection = () => {
 
           {/* Trusted Badge */}
           <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-full flex justify-center">
-            <span className="section-badge border border-[#470277] shadow-lg text-xs md:text-sm px-2 py-0.5 max-w-[240px] md:max-w-[300px] text-center">
-               Trusted by 500+ Fortune companies all over the world 
+            <span className="section-badge border border-[#470277] shadow-lg text-xs md:text-sm px-2 py-2 md:py-2.5 whitespace-normal md:whitespace-nowrap text-center">
+               Trusted by 500+ Fortune companies all over the world
             </span>
           </div>
 
           {/* Logos */}
           <div className="mt-6 overflow-hidden">
             <motion.div
-              className="flex items-center gap-8"
-              animate={{ x: [0, -500] }}
-              transition={{ repeat: Infinity, duration: 10, ease: "linear", repeatType: "loop" }}
+              className="flex items-center gap-20 sm:gap-24"
+              animate={{ x: [0, -scrollDistance] }}
+              transition={{ repeat: Infinity, duration: 30, ease: "linear", repeatType: "loop" }}
             >
               {duplicated.map((logo, index) => (
                 <img
                   key={index}
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-8 sm:h-10 object-contain opacity-80 hover:grayscale-0 hover:opacity-100 transition"
+                  className="h-8 sm:h-10 min-w-[150px] object-contain opacity-80 hover:grayscale-0 hover:opacity-100 transition"
                 />
               ))}
             </motion.div>
