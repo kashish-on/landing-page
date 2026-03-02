@@ -55,7 +55,7 @@ const CoreValues = () => {
           </h1>
         </motion.div>
 
-        <p className="font-sora text-sm text-muted-foreground text-base max-w-4xl mx-auto mb-14">
+        <p className="font-sora text-base text-muted-foreground text-base max-w-4xl mx-auto mb-14">
           Guiding how we build AI-powered intelligence that helps teams connect faster, sell smarter, and grow with confidence.
         </p>
 

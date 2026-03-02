@@ -103,7 +103,7 @@ const CustomerStoriesSection = () => {
           transition={{ delay: 0.2 }}
           className="font-sora text-center text-muted-foreground max-w-2xl mx-auto mb-8"
         >
-          See how businesses achieve real results with DataGen — from verified leads to faster conversions.
+          See how businesses achieve real results with ObserveNow.AI — from verified leads to faster conversions.
         </motion.p>
 
 

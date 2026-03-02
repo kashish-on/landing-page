@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/observenow_ai_cropped.png";
-import { Linkedin, Twitter, Instagram, Youtube} from "lucide-react";
+import { Linkedin, Twitter, Instagram, Facebook} from "lucide-react";
 
 import MailIcon from "@/assets/Mail icon.svg";
 import { NavLink } from "./NavLink";
@@ -8,23 +8,23 @@ import { NavLink } from "./NavLink";
 const socialLinks = [
   {
     icon: Linkedin,
-    url: "https://www.linkedin.com/company/observenow/posts/?feedView=all", 
+    url: "https://www.linkedin.com/company/observenowai/", 
     label: "LinkedIn",
   },
   {
     icon: Twitter,
-    url: "https://x.com/ObservenowMedia", 
+    url: "https://x.com/ObserveNowAI", 
     label: "Twitter",
   },
   {
     icon: Instagram,
-    url: "https://www.instagram.com/now_observe/", 
+    url: "https://www.instagram.com/observenowai/", 
     label: "Instagram",
   },
   {
-    icon: Youtube,
-    url: "https://www.youtube.com/@ObserveNowMedia", 
-    label: "YouTube",
+    icon: Facebook,
+    url: "https://www.facebook.com/people/ObserveNow-AI/61582981785784/", 
+    label: "Facebook",
   },
 ];
 

@@ -61,8 +61,8 @@ const PlatformOverview = () => {
         </motion.div>
 
         <p className="font-sora text-xs sm:text-sm text-muted-foreground text-base max-w-2xl mx-auto mb-12">
-          ObserveNow.AI by ObserveNow's AI-powered B2B lead enrichment platform designed to transform raw
-          LinkedIn data into verified, actionable contact intelligence. With DataGen, businesses can instantly
+          ObserveNow.AI by ObserveNow Media is an AI-powered B2B lead enrichment platform designed to transform raw
+          LinkedIn data into verified, actionable contact intelligence. With ObserveNow.AI, businesses can instantly
           enrich profiles with real mobile numbers, work emails, personal emails, job roles, and firmographic
           data — all in one seamless workflow.
         </p>
@@ -100,7 +100,7 @@ const PlatformOverview = () => {
           {feature.title}
         </h3>
 
-        <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground max-w-[240px]">
+        <p className="text-xs sm:text-sm md:text-sm leading-relaxed text-muted-foreground max-w-[240px]">
           {feature.description}
         </p>
       </div>

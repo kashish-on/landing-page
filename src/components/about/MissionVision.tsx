@@ -92,7 +92,7 @@ const MissionVision = () => {
           </h1>
         </motion.div>
 
-        <p className="font-sora text-sm text-muted-foreground text-base max-w-4xl mx-auto mb-12">
+        <p className="font-sora text-sm text-muted-foreground md:text-base max-w-4xl mx-auto mb-12">
           Guiding how we build AI-powered intelligence that helps teams connect faster, sell smarter, and grow with confidence.
           </p>
 
@@ -134,7 +134,7 @@ const MissionVision = () => {
                   <h3 className="text-2xl font-sora font-bold text-foreground mb-3">
                     {card.title}
                   </h3>
-                  <p className="text-[13px] text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {card.desc}
                   </p>
                 </div>
@@ -143,7 +143,7 @@ const MissionVision = () => {
                   <h3 className="text-2xl font-sora font-bold text-foreground mb-3">
                     {card.title}
                   </h3>
-                  <p className="text-[13px] text-left text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-left text-muted-foreground leading-relaxed">
                     {card.desc}
                   </p>
                 </div>

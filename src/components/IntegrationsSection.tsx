@@ -129,7 +129,7 @@ const IntegrationsSection = () => {
             transition={{ delay: 0.2 }}
             className="font-sora text-center text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8"
           >
-            Unlike generic data tools, DataGen is powered by advanced tech that ensures accuracy, freshness, and scalability. Experience the difference with our verified lead engines and updated CXO databases.
+            Unlike generic data tools, ObserveNow.AI is powered by advanced tech that ensures accuracy, freshness, and scalability. Experience the difference with our verified lead engines and updated CXO databases.
           </motion.p>
 
           {/* CTA Button */}

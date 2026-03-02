@@ -13,7 +13,7 @@ const founders = [
     handle: "@jeetsharma",
     img: jeetImg,
     linkedin: "https://www.linkedin.com/in/jeetsharma6/",
-    twitter: "https://x.com/ObservenowMedia",
+    twitter: "https://x.com/ObserveNowAI",
     bio: "An IIT Delhi alumnus, He looks after the Corporate Strategies & Growth of the organization. His area of expertise lies in corporate partnerships across functions. Previously he has worked with Leading Media Organizations and has Built and Launched multiple media verticals.",
   },
   {
@@ -22,7 +22,7 @@ const founders = [
     handle: "@taniyatikoo",
     img: taniyaImg,
     linkedin: "https://www.linkedin.com/in/taniya-tikoo-04651b129/",
-    twitter: "https://x.com/ObservenowMedia",
+    twitter: "https://x.com/ObserveNowAI",
     bio: "She studied Masters in Broadcast Journalism from BCU, UK and is responsible for Editorial Initiatives, Branding & Marketing for the organizations. Previously worked as Journalist for some Prominent Media Organizations.",
   },
 ];
