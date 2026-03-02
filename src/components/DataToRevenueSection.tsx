@@ -188,7 +188,7 @@ const DataToRevenueSection = () => {
 
 
                 {/* Connector Line */}
-                <img src={step.line} alt="" className="hidden sm:block h-1 w-32 -ml-4" />
+                <img src={step.line} alt="" className="hidden sm:block h-1 w-32 -ml-6 mt-6" />
               {/* </motion.div>
             ))}
           </div> */}

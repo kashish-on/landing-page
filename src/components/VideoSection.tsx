@@ -1,3 +1,5 @@
+import RumiVideo from "@/assets/rumi.mp4";
+
 const VideoSection = () => {
   return (
     <section className="py-16 bg-[#470277]/5 relative overflow-hidden">
@@ -25,7 +27,7 @@ const VideoSection = () => {
         <div className="max-w-5xl mx-auto">
           <div className="aspect-video rounded-3xl shadow-lg overflow-hidden">
             <video
-              src="https://observenow.ai/assets/img/ai-video.mp4"
+              src={RumiVideo}
               className="w-full h-full object-cover"
               autoPlay
               muted

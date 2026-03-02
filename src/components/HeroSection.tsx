@@ -23,6 +23,17 @@ const contactCards = [
   { name: "Emma Wilson", role: "Head of Growth", company: "Apple", email: "emma@scaleup.co", phone: "(650) 555-0321", logo: appleLogo, img: emmaImg },
 ];
 
+const maskEmail = (email: string) => {
+  const [name, domain] = email.split("@");
+  const visiblePart = name.slice(0, 3);
+  return `${visiblePart}***@${domain}`;
+};
+
+const maskPhone = (phone: string) => {
+  const digits = phone.replace(/\D/g, "");
+  return `(${digits.slice(0, 3)}) ***-${digits.slice(-2)}`;
+};
+
 const HeroSection = () => {
   const duplicatedCards = [...contactCards, ...contactCards, ...contactCards];
 
@@ -92,10 +103,6 @@ const HeroSection = () => {
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
-          {/* <Button size="lg" variant="outline" className="bg-[#72339F] text-white border border-[#72339F] hover:bg-[#6a2f93] hover:border-[#6a2f93] px-8 py-6 text-base group shadow-lg hover:shadow-xl transition-all">
-            CONTACT SALES
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button> */}
           <NavLink to="/contact">
   <Button
     size="lg"
@@ -162,26 +169,18 @@ const HeroSection = () => {
   />
 </div>
 
-                  <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-md border">
-  <img
-    src={card.logo}
-    alt={card.company}
-    className="w-6 h-6 object-contain"
-  />
-</div>
-
                 </div>
                 <h4 className="font-semibold text-foreground">{card.name}</h4>
                 <p className="text-sm text-muted-foreground mb-3">
-                  {card.role} at <span className="text-primary font-medium">{card.company}</span>
+                  {card.role}<span className="text-primary font-medium"></span>
                 </p>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
                   <Mail className="w-4 h-4" />
-                  <span>{card.email}</span>
+                  <span>{maskEmail(card.email)}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Phone className="w-4 h-4" />
-                  <span>{card.phone}</span>
+                  <span>{maskPhone(card.phone)}</span>
                 </div>
               </motion.div>
             ))}

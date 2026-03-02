@@ -2,71 +2,72 @@
 // import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-import google from "@/assets/google.png";
+// import google from "@/assets/google.png";
 import microsoft from "@/assets/microsoft.png";
 
 import manAvatar from "@/assets/man.png";
 import womanAvatar from "@/assets/woman.png";
+// import { Value } from "@radix-ui/react-select";
 
 const testimonials = [
   {
     type: "stat",
     value: "10X",
-    label: "Revenue Boost",
+    label: "Revenue Growth",
     company: "Microsoft",
     bgColor: "bg-[#470277]/10",
   },
   {
     type: "stat",
-    value: "10X",
-    label: "Revenue Boost",
-    company: "Microsoft",
+    value: "3X",
+    label: "Faster Lead Qualification",
+    company: "Enterprise SaaS",
     bgColor: "bg-[#0B87BA]/10",
   },
   {
     type: "quote",
-    quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
-    author: "Ekin Bayildiran",
-    role: "Executive Search, Tenstorrent",
-    company: "Google",
+    quote: "\"ObserveNow.ai delivers reliable, decision-maker-level contacts with strong accuracy. It has streamlined our outbound process significantly.\"",
+    author: "Arjun Malhotra",
+    role: "Head of Sales, B2B SaaS Company",
+    company: "Google Review",
     bgColor: "bg-card",
   },
   {
     type: "quote",
-    quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
-    author: "Ekin Bayildiran",
-    role: "Executive Search, Tenstorrent",
-    company: "Google",
+    quote: "\"High-quality contact intelligence and easy usability. It supports more targeted and effective outreach.\"",
+    author: "Priya Nair",
+    role: "Revenue Operations Lead, Tech Enterprise",
+    company: "Google Review",
     bgColor: "bg-card",
   },
   {
     type: "quote",
-    quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
-    author: "Ekin Bayildiran",
-    role: "Executive Search, Tenstorrent",
-    company: "Google",
+    quote: "\"Accurate data, clean interface, and consistent results. A valuable tool for revenue-focused teams.\"",
+    author: "Rohit Verma",
+    role: "Executive Search Consultant",
+    company: "Google Review",
     bgColor: "bg-card",
   },
   {
     type: "stat",
-    value: "10X",
-    label: "Revenue Boost",
-    company: "Microsoft",
+    value: "40%",
+    label: "Higher Response Rate",
+    company: "Growth Marketing Team",
     bgColor: "bg-[#0B87BA]/10",
   },
   {
     type: "quote",
-    quote: "\"Very easy to use, and it gives contact details that are not available on others I have used.\"",
-    author: "Ekin Bayildiran",
-    role: "Executive Search, Tenstorrent",
-    company: "Google",
+    quote: "\"The data accuracy and relevance have strengthened our outreach strategy. ObserveNow.ai gives us confidence in every contact we engage.\"",
+    author: "Neha Verma",
+    role: "Director of Business Development",
+    company: " CloudAxis Inc",
     bgColor: "bg-card",
   },
   {
     type: "stat",
-    value: "10X",
-    label: "Revenue Boost",
-    company: "Microsoft",
+    value: "2X",
+    label: "Pipeline Acceleration",
+    company: "B2B Services",
     bgColor: "bg-[#470277]/10",
   },
 ];
@@ -108,24 +109,11 @@ const CustomerStoriesSection = () => {
           See how businesses achieve real results with DataGen — from verified leads to faster conversions.
         </motion.p>
 
-        {/* CTA */}
-        {/* <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="flex justify-center mb-8"
-        >
-          <Button size="lg" className="btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet">
-            READ CUSTOMER STORY
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </motion.div> */}
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((item, index) => {
-            const profileImg = index % 2 === 0 ? manAvatar : womanAvatar;
+            const profileImg = item.author === "Priya Nair" || item.author === "Neha Verma" ? womanAvatar : manAvatar;
 
             return (
               <motion.div
@@ -146,11 +134,14 @@ const CustomerStoriesSection = () => {
                     <div className="font-sora text-4xl font-bold text-foreground mb-2">{item.value}</div>
                     <div className="text-muted-foreground mb-8">{item.label}</div>
                     <div className="flex items-center gap-2">
+                       {/* {index === 0 && (
                       <img
                         src={microsoft}
                         alt="Microsoft"
                         className="w-12 h-12 object-contain"
                       />
+                       )} */}
+                    
                       <span className="font-medium text-muted-foreground">{item.company}</span>
                     </div>
                   </div>
@@ -169,11 +160,11 @@ const CustomerStoriesSection = () => {
                           <div className="text-sm text-muted-foreground">{item.role}</div>
                         </div>
                       </div>
-                      <img
+                      {/* <img
                         src={google}
                         alt="Google"
                         className="w-12 h-8 object-contain"
-                      />
+                      /> */}
                     </div>
                   </div>
                 )}

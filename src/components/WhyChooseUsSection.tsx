@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-import FeatureLeftImg from "@/assets/whychooseus.svg";
+import FeatureLeftImg from "@/assets/whychooseus.png";
 import { NavLink } from "./NavLink";
 
 const features = [
@@ -47,21 +47,15 @@ const WhyChooseUsSection = () => {
           >
             <div
               className="
-                aspect-[4/3] 
-                rounded-2xl 
-                bg-white 
-                border-2 
-                border-[#72339F]/40 
-                shadow-[0_12px_40px_rgba(114,51,159,0.15)]
-                p-6
-                flex 
-                items-center 
-                justify-center
-                duration-300 
-    ease-out
+                relative
+    w-full
+    h-[420px] md:h-[500px]
+    rounded-2xl
+    border-2 border-[#72339F]/40
+    shadow-[0_12px_40px_rgba(114,51,159,0.15)]
+    overflow-hidden
     hover:-translate-y-2
-    hover:shadow-[0_12px_30px_rgba(114,51,159,0.12)]
-    hover:border-[#72339F]
+    transition-all duration-300
               "
             >
               {/* Replace this div with your actual image */}
@@ -69,7 +63,7 @@ const WhyChooseUsSection = () => {
               <img 
   src={FeatureLeftImg}
   alt="Why Choose Us"
-  className="w-full h-full object-contain rounded-xl"
+  className="absolute inset-0 w-full h-full object-cover -translate-y-0"
 />
 
             </div>
