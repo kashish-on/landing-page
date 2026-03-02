@@ -2,9 +2,6 @@
 // import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-// import google from "@/assets/google.png";
-import microsoft from "@/assets/microsoft.png";
-
 import manAvatar from "@/assets/man.png";
 import womanAvatar from "@/assets/woman.png";
 // import { Value } from "@radix-ui/react-select";
