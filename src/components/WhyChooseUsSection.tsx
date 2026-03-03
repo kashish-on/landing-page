@@ -117,7 +117,7 @@ const WhyChooseUsSection = () => {
     
 
       {/* Marquee */}
-      <div className="mt-16 py-4 bg-[#0B87BA]/10 overflow-hidden">
+      {/* <div className="mt-16 py-4 bg-[#0B87BA]/10 overflow-hidden">
         <motion.div 
           className="whitespace-nowrap flex"
           animate={{ x: [0, -1000] }}
@@ -125,12 +125,33 @@ const WhyChooseUsSection = () => {
         >
           {[...marqueeItems, ...marqueeItems].map((item, index) => (
             <span key={index} className="mx-8 text-sm font-semibold text-foreground flex items-center gap-4">
-              <span className="text-[#72339F]">✦</span>
               {item}
+              <span className="text-[#72339F]">✦</span>
             </span>
           ))}
         </motion.div>
+      </div> */}
+
+      <div className="mt-16 py-4 bg-[#0B87BA]/10 overflow-hidden">
+  <motion.div
+    className="whitespace-nowrap flex items-center"
+    animate={{ x: [0, -1000] }}
+    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+  >
+    {[...marqueeItems, ...marqueeItems].map((item, index) => (
+      <div key={index} className="flex items-center">
+        <span className="mx-6 text-sm font-semibold text-foreground">
+          {item}
+        </span>
+
+        {/* Star BETWEEN items */}
+        <span className="text-[#72339F] mx-6 text-lg">
+          ✦
+        </span>
       </div>
+    ))}
+  </motion.div>
+</div>
       
     </section>
   );

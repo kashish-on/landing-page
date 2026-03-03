@@ -106,7 +106,7 @@ const IntegrationsSection = () => {
             viewport={{ once: true }}
             className="flex justify-center mb-1"
           >
-            <span className="section-badge mt-10 sm:-mt-10 mb-3 border border-[#470277] inline-block text-xs sm:text-sm md:text-base">Our Toolset</span>
+            <span className="section-badge mt-10 sm:-mt-10 mb-3 border border-[#470277] inline-block text-xs sm:text-sm md:text-base">  Our Toolset  </span>
           </motion.div>
 
           {/* Heading */}

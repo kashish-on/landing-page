@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/observenow_ai_cropped.png";
-import { Linkedin, Twitter, Instagram, Facebook} from "lucide-react";
+import { Linkedin, X, Instagram, Facebook} from "lucide-react";
 
 import MailIcon from "@/assets/Mail icon.svg";
 import { NavLink } from "./NavLink";
@@ -12,9 +12,9 @@ const socialLinks = [
     label: "LinkedIn",
   },
   {
-    icon: Twitter,
+    icon: X,
     url: "https://x.com/ObserveNowAI", 
-    label: "Twitter",
+    label: "X",
   },
   {
     icon: Instagram,
@@ -87,7 +87,7 @@ const Footer = () => {
             <img
   src={logo}
   alt="Your Brand Name"
-  className="h-12 mb-4"
+  className="h-16 mb-4"
  />
 
             <p className="text-black/60 text-sm w-full md:w-[320px] mb-6">
@@ -96,7 +96,7 @@ const Footer = () => {
               connect with the right people, faster.
             </p>
   
-          <div className="flex gap-3">
+          {/* <div className="flex gap-3">
   {socialLinks.map(({ icon: Icon, url, label }, i) => (
     <a
       key={i}
@@ -110,6 +110,39 @@ const Footer = () => {
         <div className="w-8 h-8 rounded-full bg-[#EFEFEF] flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_14px_rgba(114,51,159,0.35)]">
           <Icon className="w-4 h-4 text-black" />
         </div>
+      </div>
+    </a>
+  ))}
+</div> */}
+
+<div className="flex gap-4">
+  {socialLinks.map(({ icon: Icon, url, label }, i) => (
+    <a
+      key={i}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="group"
+    >
+       {/* Gradient Border */}
+      <div className="p-[2px] rounded-full bg-gradient-to-r from-[#48B4E1] to-[#72339F] transition-all duration-300">
+      <div
+        className="
+          w-10 h-10
+          rounded-full
+          flex items-center justify-center
+          bg-[#EFEFEF]
+          transition-all duration-300
+          group-hover:bg-gradient-to-r
+          group-hover:from-[#48B4E1]
+          group-hover:to-[#72339F]
+          group-hover:shadow-[0_0_18px_rgba(114,51,159,0.35)]
+          group-hover:scale-110
+        "
+      >
+        <Icon className="w-5 h-5 text-black transition-colors duration-300 group-hover:text-white" />
+      </div>
       </div>
     </a>
   ))}
@@ -220,7 +253,7 @@ const Footer = () => {
   </div>
 
         <div className="text-center md:text-right mt-4 md:mt-5">
-          © 2026 Adverbo Productions LLP. All Rights Reserved.
+          Observenow.ai © 2026 Adverbo Productions LLP. All Rights Reserved.
         </div>
       </div>
       </div>
