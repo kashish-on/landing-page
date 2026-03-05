@@ -15,7 +15,8 @@ import GDPRPage from "./pages/GDPR";
 import DPDPPage from "./pages/DPDP";
 import CookiePage from "./pages/Cookie";
 import DisclaimerPage from "./pages/Disclaimer";
-import ScrollToHash from "./components/ScroolToHash";
+// import ScrollToHash from "./components/ScroolToHash";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +26,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-      <ScrollToHash/>
+      {/* <ScrollToHash/> */}
+      <ScrollToTop/>
         <Routes>
          <Route element={<Layout />}>
           <Route path="/" element={<Index />} />
