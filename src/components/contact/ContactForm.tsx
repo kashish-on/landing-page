@@ -6,10 +6,32 @@ import { Button } from "../ui/button";
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle submission
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+
+  formData.append("entry.268917706", form.name);
+  formData.append("entry.1001844892", form.email);
+  formData.append("entry.1550242072", form.message);
+
+  await fetch(
+    "https://docs.google.com/forms/d/e/1FAIpQLSfvcpeSsIf-nORMWv2rdj93opkGFEwg1LJ0MV75sdSKALL49g/formResponse",
+    {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    }
+  );
+
+  alert("Message sent successfully!");
+
+  setForm({
+    name: "",
+    email: "",
+    message: "",
+  });
+};
 
   return (
     <section className="py-4 md:py-8 bg-[#470277]/5 overflow-hidden gradient-hero-bg">
@@ -91,10 +113,17 @@ const ContactForm = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-2"
         >
-          <Button size="lg" className="btn-gradient button text-primary-foreground text-base group shadow-violet">
+          {/* <Button size="lg" className="btn-gradient button text-primary-foreground text-base group shadow-violet">
             SEND MESSAGE
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          </Button> */}
+          <Button
+  type="submit"
+  size="lg"
+  className="btn-gradient button text-primary-foreground text-base group shadow-violet"
+>
+  SEND MESSAGE
+</Button>
         </motion.div>
           </div>
         </form>
