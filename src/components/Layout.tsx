@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import ScrollToHash from "./ScroolToHash";
 import ScrollToTop from "./ScrollToTop";
+import Chatbot from "./Chatbot";
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
+      <Chatbot/>
     </>
   );
 };
