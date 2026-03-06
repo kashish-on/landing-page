@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import logo from "@/assets/observenow_ai_cropped.png";
 import { Linkedin, X, Instagram, Facebook} from "lucide-react";
 
+import { Link } from "react-router-dom";
+
 import MailIcon from "@/assets/Mail icon.svg";
 import { NavLink } from "./NavLink";
 
@@ -95,25 +97,6 @@ const Footer = () => {
               integration, and smart filters — everything you need to find and
               connect with the right people, faster.
             </p>
-  
-          {/* <div className="flex gap-3">
-  {socialLinks.map(({ icon: Icon, url, label }, i) => (
-    <a
-      key={i}
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className="group"
-    >
-      <div className="p-[2px] rounded-full bg-gradient-to-r from-[#48B4E1] to-[#72339F]">
-        <div className="w-8 h-8 rounded-full bg-[#EFEFEF] flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_14px_rgba(114,51,159,0.35)]">
-          <Icon className="w-4 h-4 text-black" />
-        </div>
-      </div>
-    </a>
-  ))}
-</div> */}
 
 <div className="flex gap-4">
   {socialLinks.map(({ icon: Icon, url, label }, i) => (
@@ -162,10 +145,23 @@ const Footer = () => {
               </div>
             <ul className="mt-4 space-y-3 text-black/60 text-sm">
               <li><a href="/"className="hover:text-black transition-colors">Home</a></li>
-              <li><a href="/about" className="hover:text-black transition-colors">About us</a></li>
-              <li><a href="https://dashboard.observenow.ai/signup" className="hover:text-black transition-colors">Free Trial</a></li>
-              <li><a href="/contact" className="hover:text-black transition-colors">Contact Us</a></li>
-              {/* <li><a href="/privacy">Privacy Policy</a></li> */}
+              <li>
+  <Link to="/about" className="hover:text-black transition-colors">
+    About us
+  </Link>
+</li>
+
+              <li>
+  <Link to="https://dashboard.observenow.ai/signup" className="hover:text-black transition-colors">
+    Free Trial
+  </Link>
+</li>
+
+<li>
+  <Link to="/contact" className="hover:text-black transition-colors">
+    Contact Us
+  </Link>
+</li>
             </ul>
           </div>
 
@@ -180,11 +176,30 @@ const Footer = () => {
                 />
               </div>
             <ul className="mt-4 space-y-3 text-black/60 text-sm">
-              <li><a href="/pricing#faqs" className="hover:text-black transition-colors">FAQs</a></li>
+              {/* <li><a href="/pricing#faqs" className="hover:text-black transition-colors">FAQs</a></li>
               <li><a href="/contact" className="hover:text-black transition-colors">Support</a></li>
               <li><a href="/#howitworks" className="hover:text-black transition-colors">How It Work</a></li>
-              <li><a href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi" className="hover:text-black transition-colors">Chrome Extension</a></li>
+              <li><a href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi" className="hover:text-black transition-colors">Chrome Extension</a></li> */}
+
               {/* <li><a href="/privacy" className="hover:text-black transition-colors">Privacy Policy</a></li> */}
+
+              <li>
+  <Link to="/pricing#faqs" className="hover:text-black transition-colors">
+    FAQs
+  </Link>
+</li>
+<li>
+  <Link to="/contact" className="hover:text-black transition-colors">
+    Support
+  </Link>
+</li>
+<li>
+  <Link to="/#howitworks" className="hover:text-black transition-colors">
+    How It Works
+  </Link>
+</li>
+
+<li><a href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi" className="hover:text-black transition-colors">Chrome Extension</a></li>
             </ul>
           </div>
 
@@ -227,29 +242,43 @@ const Footer = () => {
       <div className="mt-8 pt-4 pb-6 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-black/50">
          {/* Left Links */}
   <div className="flex flex-wrap items-center gap-2 text-xs">
-    <a href="/privacy" className="hover:text-black transition-colors">
-      Privacy Policy
-    </a>
+  <ul className="flex flex-wrap items-center gap-2 text-xs list-none">
+    <li>
+  <Link to="/privacy" className="hover:text-black transition-colors">
+    Privacy Policy
+  </Link>
+</li>
     <span>|</span>
-    <a href="/terms" className="hover:text-black transition-colors">
-      Terms
-    </a>
+    <li>
+  <Link to="/terms" className="hover:text-black transition-colors">
+    Terms
+  </Link>
+</li>
     <span>|</span>
-    <a href="/gdpr" className="hover:text-black transition-colors">
-      GDPR
-    </a>
+    <li>
+  <Link to="/gdpr" className="hover:text-black transition-colors">
+    GDPR
+  </Link>
+</li>
     <span>|</span>
-    <a href="/dpdp" className="hover:text-black transition-colors">
-      DPDP Act
-    </a>
+    <li>
+  <Link to="/dpdp" className="hover:text-black transition-colors">
+    DPDP Act
+  </Link>
+</li>
     <span>|</span>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-PCdgL-WlIfkLCFl9A6Dut6FMJykz_u4eVYuC45ISlCfwYw/viewform?usp=publish-editor" className="hover:text-black transition-colors">
-      Data Removal
-    </a> 
+    <li>
+  <Link to="https://docs.google.com/forms/d/e/1FAIpQLSf-PCdgL-WlIfkLCFl9A6Dut6FMJykz_u4eVYuC45ISlCfwYw/viewform?usp=publish-editor" className="hover:text-black transition-colors">
+    Data Removal
+  </Link>
+</li>
     <span>|</span>
-    <a href="/cookie" className="hover:text-black transition-colors">
-      Cookie Policy
-    </a>
+    <li>
+  <Link to="/cookie" className="hover:text-black transition-colors">
+    Cookie Policy
+  </Link>
+</li>
+</ul>
   </div>
 
         <div className="text-center md:text-right mt-4 md:mt-5">
