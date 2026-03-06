@@ -123,6 +123,7 @@ const ContactForm = () => {
   className="btn-gradient button text-primary-foreground text-base group shadow-violet"
 >
   SEND MESSAGE
+  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
 </Button>
         </motion.div>
           </div>
