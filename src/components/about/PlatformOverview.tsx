@@ -60,7 +60,7 @@ const PlatformOverview = () => {
           </h1>
         </motion.div>
 
-        <p className="font-sora text-xs sm:text-sm text-muted-foreground text-base max-w-2xl mx-auto mb-12">
+        <p className="font-sora text-sm sm:text-base text-muted-foreground max-w-md sm:max-w-2xl mx-auto leading-relaxed px-2 mb-12">
           ObserveNow.AI by ObserveNow Media is an AI-powered B2B lead enrichment platform designed to transform raw
           LinkedIn data into verified, actionable contact intelligence. With ObserveNow.AI, businesses can instantly
           enrich profiles with real mobile numbers, work emails, personal emails, job roles, and firmographic
@@ -81,7 +81,7 @@ const PlatformOverview = () => {
       <div
         key={feature.title}
         className={`
-          font-dm text-center items-center rounded-xl border border-[#470277]/20 bg-card p-4 sm:p-6 min-h-auto sm:min-h-[300px] w-full max-w-xs sm:max-w-none flex flex-col items-start justify-start text-left
+          font-dm text-center items-center rounded-xl border border-[#470277]/20 bg-card p-4 sm:p-6 min-h-auto sm:min-h-[300px] w-full max-w-[320px] mx-auto sm:max-w-none flex flex-col items-center sm:items-center sm:text-center
           transition-all duration-300
           ${index % 2 === 1 ? "lg:translate-y-10" : "lg:-translate-y-4"}
           ${shadowMap[index]}
@@ -100,7 +100,7 @@ const PlatformOverview = () => {
           {feature.title}
         </h3>
 
-        <p className="text-xs sm:text-sm md:text-sm leading-relaxed text-muted-foreground max-w-[240px]">
+        <p className="text-xs sm:text-sm md:text-sm leading-relaxed text-muted-foreground max-w-none sm:max-w-[240px]">
           {feature.description}
         </p>
       </div>

@@ -52,12 +52,12 @@ const FAQSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center max-w-4xl mx-auto mb-8"
         >
-          <h1 className="font-sora text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
+          <h1 className="font-sora text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
             Frequently Asked <span className="text-[#72339F]/80">Questions</span>
           </h1>
         </motion.div>
 
-        <p className="font-sora text-muted-foreground text-base max-w-2xl mx-auto mb-6">
+        <p className="font-sora text-sm text-muted-foreground sm:text-base max-w-2xl mx-auto mb-6">
           Learn how ObserveNow helps you find, reach, and convert the right prospects.
         </p>
 

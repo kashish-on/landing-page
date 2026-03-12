@@ -151,7 +151,7 @@ const PricingSection = () => {
           </h1>
         </motion.div>
 
-        <p className="font-sora text-muted-foreground text-base max-w-5xl mx-auto mb-14">
+        <p className="font-sora text-sm text-muted-foreground sm:text-base max-w-md sm:max-w-4xl mx-auto mb-12 px-2">
           Get reliable data extraction and verified leads without the complexity. Designed for startups and small businesses and Enterprises
           this plan helps you generate high-quality leads and kickstart your growth journey with ease.
         </p>
@@ -159,7 +159,7 @@ const PricingSection = () => {
         {/* Top Plans Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {topPlans.map((plan) => (
-            <div key={plan.name} className="font-inter rounded-xl border border-border bg-card overflow-hidden text-left">
+            <div key={plan.name} className="font-inter rounded-xl border border-border bg-card overflow-hidden max-w-[300px] sm:max-w-none mx-auto text-left">
               <div className="font-inter bg-gradient-to-r from-[#5BB2E6] to-[#6E3CBC] text-white text-xs font-semibold py-2 px-4 flex items-center justify-center gap-2">
               <img src={plan.badgeIcons[0]} className="w-3.5 h-3.5" />
   <span className="uppercase tracking-wide">{plan.badge}</span>
@@ -239,7 +239,7 @@ const PricingSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className={`relative font-inter bg-white rounded-3xl border transition-all overflow-hidden ${
+              className={`relative font-inter bg-white rounded-3xl border transition-all overflow-hidden w-full max-w-[300px] sm:max-w-none mx-auto ${
                 plan.popular
                   ? "border-2 border-[#470277] shadow-[0_8px_20px_rgba(71,2,119,0.35)]"
                   : "border border-border"
@@ -371,3 +371,4 @@ const PricingSection = () => {
 };
 
 export default PricingSection;
+

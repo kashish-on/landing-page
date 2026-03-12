@@ -94,7 +94,7 @@ const HowItWorksSection = () => {
             className="flex-1 w-full"
           >
             <h2 className="font-sora text-3xl md:text-4xl font-bold mb-2">
-              Boost Prospecting with a
+              Boost Prospecting with 
             </h2>
             <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#72339F]/80 mb-6">
               Chrome Extension

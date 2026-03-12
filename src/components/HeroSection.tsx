@@ -98,8 +98,8 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
         >
           <Button size="lg" className="btn-gradient text-primary-foreground px-8 py-6 text-base group shadow-violet">
-            <a href="https://dashboard.observenow.ai/signup" className="flex items-center gap-2">
-            GET FREE TRIAL
+            <a href="https://chromewebstore.google.com/detail/observenowai-linkedin-pro/pkoknghbccdigldobkjndnbjoagajahi" className="flex items-center gap-2">
+            ADD TO CHROME
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>

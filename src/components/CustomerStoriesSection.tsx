@@ -123,7 +123,7 @@ const CustomerStoriesSection = () => {
                 className={`${item.bgColor} rounded-2xl p-6 border border-border hover:shadow-card transition-shadow ${
       item.type === "stat"
         ? "lg:col-span-1 w-full max-w-[300px] mx-auto shadow-md"     // 👈 makes colored boxes narrower (more square)
-        : "lg:col-span-2 h-[220px] shadow-md"             // 👈 makes white boxes wider (rectangle)
+        : "lg:col-span-2 md:h-[220px] shadow-md"             // 👈 makes white boxes wider (rectangle)
     }`}
               >
                 {item.type === "stat" ? (

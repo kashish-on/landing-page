@@ -92,7 +92,7 @@ const MissionVision = () => {
           </h1>
         </motion.div>
 
-        <p className="font-sora text-sm text-muted-foreground md:text-base max-w-4xl mx-auto mb-12">
+        <p className="font-sora text-sm sm:text-base text-muted-foreground max-w-md sm:max-w-4xl leading-relaxed px-2 mx-auto mb-12">
           Guiding how we build AI-powered intelligence that helps teams connect faster, sell smarter, and grow with confidence.
           </p>
 
@@ -130,7 +130,7 @@ const MissionVision = () => {
               )}
 
               {card.type === "mission" ? (
-                <div className="text-left mt-16 max-w-[65%]">
+                <div className="text-left mt-12 sm:mt-16 max-w-full sm:max-w-[65%]">
                   <h3 className="text-2xl font-sora font-bold text-foreground mb-3">
                     {card.title}
                   </h3>
@@ -139,7 +139,7 @@ const MissionVision = () => {
                   </p>
                 </div>
               ) : card.type === "vision" ? (
-                <div className="text-left mt-16 max-w-[70%]">
+                <div className="text-left mt-12 sm:mt-16 max-w-full sm:max-w-[70%]">
                   <h3 className="text-2xl font-sora font-bold text-foreground mb-3">
                     {card.title}
                   </h3>
