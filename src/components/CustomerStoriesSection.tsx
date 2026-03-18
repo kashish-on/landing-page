@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     type: "quote",
-    quote: "\"ObserveNow.ai delivers reliable, decision-maker-level contacts with strong accuracy. It has streamlined our outbound process significantly.\"",
+    quote: "\"ObserveNow.AI delivers reliable, decision-maker-level contacts with strong accuracy. It has streamlined our outbound process significantly.\"",
     author: "Arjun Malhotra",
     role: "Head of Sales, B2B SaaS Company",
     company: "Google Review",
@@ -54,7 +54,7 @@ const testimonials = [
   },
   {
     type: "quote",
-    quote: "\"The data accuracy and relevance have strengthened our outreach strategy. ObserveNow.ai gives us confidence in every contact we engage.\"",
+    quote: "\"The data accuracy and relevance have strengthened our outreach strategy. ObserveNow.AI gives us confidence in every contact we engage.\"",
     author: "Neha Verma",
     role: "Director of Business Development",
     company: " CloudAxis Inc",

@@ -51,7 +51,7 @@ const HeroSection = () => {
         </motion.div>
 
         <p className="font-sora text-xs sm:text-sm text-muted-foreground text-base md:text-lg mb-8 max-w-3xl mx-auto">
-          ObserveNow.ai helps B2B teams find high-intent prospects, access verified contacts, and act on
+          ObserveNow.AI helps B2B teams find high-intent prospects, access verified contacts, and act on
           real-time insights to drive faster, more predictable revenue.
         </p>
 

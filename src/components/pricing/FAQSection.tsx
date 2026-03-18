@@ -58,7 +58,7 @@ const FAQSection = () => {
         </motion.div>
 
         <p className="font-sora text-sm text-muted-foreground sm:text-base max-w-2xl mx-auto mb-6">
-          Learn how ObserveNow helps you find, reach, and convert the right prospects.
+          Learn how ObserveNow.AI helps you find, reach, and convert the right prospects.
         </p>
 
         <motion.div 
@@ -141,7 +141,7 @@ const FAQSection = () => {
           </h3>
 
           <p className="font-sora text-white/80 max-w-2xl mx-auto text-sm mb-6">
-            Try ObserveNow free and access verified contacts, intelligent filters, and real-time insights in minutes.
+            Try ObserveNow.AI free and access verified contacts, intelligent filters, and real-time insights in minutes.
           </p>
 
          <Button 

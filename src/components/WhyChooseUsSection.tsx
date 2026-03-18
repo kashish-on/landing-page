@@ -10,7 +10,7 @@ const features = [
   "India + APAC strong, global expansion",
   "Data + Events Network + Client Account List Enrichment",
   "Flexible, volume-based, competitive",
-  "Trusted Growth Partner — Events + Data + AI",
+  "Trusted Growth Partner - Events + Data + AI",
   "Event-Driven Market Intel ObserveNow",
 ];
 
@@ -114,23 +114,6 @@ const WhyChooseUsSection = () => {
           </motion.div>
         </div>
       </div>
-    
-
-      {/* Marquee */}
-      {/* <div className="mt-16 py-4 bg-[#0B87BA]/10 overflow-hidden">
-        <motion.div 
-          className="whitespace-nowrap flex"
-          animate={{ x: [0, -1000] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        >
-          {[...marqueeItems, ...marqueeItems].map((item, index) => (
-            <span key={index} className="mx-8 text-sm font-semibold text-foreground flex items-center gap-4">
-              {item}
-              <span className="text-[#72339F]">✦</span>
-            </span>
-          ))}
-        </motion.div>
-      </div> */}
 
       <div className="mt-16 py-4 bg-[#0B87BA]/10 overflow-hidden">
   <motion.div

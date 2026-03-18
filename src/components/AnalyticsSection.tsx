@@ -34,7 +34,7 @@ const AnalyticsSection = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-2">Advanced tracking</h4>
               <p className="text-[13px] leading-snug text-muted-foreground -mt-1">
-                All the generators on the Internet tend to repeat predefined chunks as necessary
+                Track user behavior in real time with precise data insights across all touchpoints.
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@ const AnalyticsSection = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-2">In-depth monitoring</h4>
               <p className="text-[13px] leading-snug text-muted-foreground -mt-1">
-                All the generators on the Internet tend to repeat predefined chunks as necessary
+                Gain deeper visibility into performance trends with detailed analytics and reporting.
               </p>
             </div>
           </div>

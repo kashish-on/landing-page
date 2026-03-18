@@ -158,14 +158,14 @@ const PricingSection = () => {
                   <div className="flex justify-between">
                     <span className="flex items-center gap-2">
       <img src={MailIcon} alt="Email" className="w-4 h-4" />
-      Reveal contact's emails
+      Reveal contact emails
     </span>
                     <span className="text-foreground">1 credit</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="flex items-center gap-2">
       <img src={PhoneIcon} alt="Phone" className="w-4 h-4" />
-      Reveal contact's phones
+      Reveal contact phones
     </span>
                     <span className="text-foreground">4 credits</span>
                   </div>
