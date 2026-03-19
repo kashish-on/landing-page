@@ -24,7 +24,7 @@ const Header = () => {
             <img
               src={logo}
               alt="ObserveNow AI"
-              className="h-full max-h-[100px] w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </NavLink>
 

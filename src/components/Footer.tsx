@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logo from "@/assets/observenow_ai_cropped.png";
+import logo from "@/assets/observenow_ai.png";
 import { Linkedin, X, Instagram, Facebook} from "lucide-react";
 
 import { Link } from "react-router-dom";
