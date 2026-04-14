@@ -7,7 +7,6 @@ import GridPattern from "@/assets/white-grid.svg";
 import blogImage from "@/assets/blog1.png";
 import blogImage2 from "@/assets/blog2.png";
 import blogImage3 from "@/assets/blog3.png";
-import blogImage4 from "@/assets/blog4.png";
 import userIcon from "@/assets/user.svg";
 
 const blogPosts = [
