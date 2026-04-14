@@ -15,6 +15,8 @@ import GDPRPage from "./pages/GDPR";
 import DPDPPage from "./pages/DPDP";
 import CookiePage from "./pages/Cookie";
 import DisclaimerPage from "./pages/Disclaimer";
+import BlogsPage from "./pages/Blogs-page";
+import BlogDetailPage from "./pages/BlogDetail-page";
 // import ScrollToHash from "./components/ScroolToHash";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs/:slug" element={<BlogDetailPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/gdpr" element={<GDPRPage />} />
